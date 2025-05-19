@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Neon/Casino Animations */
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 8px #ff00b4,
+      0 0 16px #ff0059,
+      0 0 32px #a259ff;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.5;
+    text-shadow: none;
+  }
+}
+@keyframes neon-fade {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; text-shadow: 0 0 16px #00eaff, 0 0 32px #ff00b4; }
+  100% { opacity: 0.7; }
+}
+@keyframes slot-anim {
+  0% { transform: translateY(-10px) scale(0.95) rotate(-2deg); opacity: 0.5; }
+  60% { transform: translateY(2px) scale(1.05) rotate(2deg); opacity: 1; }
+  100% { transform: none; opacity: 1; }
+}
+.neon-glow {
+  box-shadow: 0 0 16px #ff00b4, 0 0 32px #00eaff, 0 0 64px #a259ff;
+  border-color: #ff0059 !important;
+}
+.neon-flicker {
+  animation: neon-flicker 2.2s infinite alternate;
+}
+.neon-fade {
+  animation: neon-fade 2.5s infinite;
+}
+.slot-anim {
+  animation: slot-anim 0.7s cubic-bezier(.68,-0.55,.27,1.55) both;
+}

@@ -6,38 +6,61 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
   
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-white">
+    <div
+      className="min-h-screen text-white"
+      style={{
+        background:
+          "radial-gradient(ellipse at top, #2d0036 0%, #0a0a23 100%)",
+      }}
+    >
       {/* Header */}
       <header className="container mx-auto px-4 py-6">
         <nav className="flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2">
-            <Building2 className="w-8 h-8" />
-            <span className="text-xl font-bold">LOTO PRISON</span>
+          <Link
+            to="/"
+            className="flex items-center gap-2"
+            style={{
+              textShadow: "0 0 8px #ff0059, 0 0 16px #a259ff",
+            }}
+          >
+            <Building2 className="w-8 h-8 text-neon-pink drop-shadow-[0_2px_8px_rgba(255,0,120,0.7)]" />
+            <span className="text-2xl font-extrabold text-neon-pink tracking-widest">
+              LOTO PRISON
+            </span>
           </Link>
           <div className="flex gap-4">
-            <Link 
+            <Link
               to="/loto-prison"
-              className={`hover:text-pink-400 transition font-bold ${
-                location.pathname === '/loto-prison' ? 'text-pink-400' : ''
+              className={`hover:text-neon-pink transition font-bold ${
+                location.pathname === "/loto-prison" ? "text-neon-pink" : ""
               }`}
+              style={{
+                textShadow: "0 0 8px #ff00b4, 0 0 16px #a259ff",
+              }}
             >
               Loto Prison
             </Link>
-            <Link 
+            <Link
               to="/comment-jouer"
-              className={`hover:text-yellow-400 transition ${location.pathname === '/comment-jouer' ? 'text-yellow-400' : ''}`}
+              className={`hover:text-neon-yellow transition ${
+                location.pathname === "/comment-jouer" ? "text-neon-yellow" : ""
+              }`}
             >
               Comment jouer ?
             </Link>
-            <Link 
+            <Link
               to="/affaire"
-              className={`hover:text-yellow-400 transition ${location.pathname === '/affaire' ? 'text-yellow-400' : ''}`}
+              className={`hover:text-neon-yellow transition ${
+                location.pathname === "/affaire" ? "text-neon-yellow" : ""
+              }`}
             >
               L'affaire
             </Link>
-            <Link 
+            <Link
               to="/alex-jordanov"
-              className={`hover:text-yellow-400 transition ${location.pathname === '/alex-jordanov' ? 'text-yellow-400' : ''}`}
+              className={`hover:text-neon-yellow transition ${
+                location.pathname === "/alex-jordanov" ? "text-neon-yellow" : ""
+              }`}
             >
               Alex Jordanov
             </Link>
@@ -51,16 +74,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </main>
 
       {/* Footer */}
-      <footer className="container mx-auto px-4 py-8 mt-16 border-t border-slate-700">
+      <footer className="container mx-auto px-4 py-8 mt-16 border-t border-neon-pink">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-slate-400 text-center md:text-left">
+          <div className="text-sm text-neon-blue text-center md:text-left drop-shadow-[0_2px_8px_rgba(0,234,255,0.7)]">
             © 2025 Loto Prison - Une initiative satirique pour la liberté de la presse
           </div>
           <div className="flex gap-4 text-sm">
-            <Link to="/mentions-legales" className="text-slate-400 hover:text-yellow-400 transition">
+            <Link
+              to="/mentions-legales"
+              className="text-neon-purple hover:text-neon-yellow transition"
+            >
               Mentions légales
             </Link>
-            <Link to="/protection-donnees" className="text-slate-400 hover:text-yellow-400 transition">
+            <Link
+              to="/protection-donnees"
+              className="text-neon-purple hover:text-neon-yellow transition"
+            >
               Protection des données
             </Link>
           </div>
