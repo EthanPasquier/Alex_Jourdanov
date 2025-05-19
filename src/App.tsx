@@ -7,6 +7,7 @@ import { Case } from './pages/Case';
 import { Biography } from './pages/Biography';
 import { Participate } from './pages/Participate';
 import { Prize } from './pages/Prize';
+import LotoPrison from './pages/LotoPrison';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/alex-jordanov" element={<Biography />} />
         <Route path="/participer" element={<Participate />} />
         <Route path="/prix" element={<Prize />} />
+        <Route path="/loto-prison" element={<LotoPrison />} />
       </Routes>
     </Layout>
   );

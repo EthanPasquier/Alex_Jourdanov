@@ -16,6 +16,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </Link>
           <div className="flex gap-4">
             <Link 
+              to="/loto-prison"
+              className={`hover:text-pink-400 transition font-bold ${
+                location.pathname === '/loto-prison' ? 'text-pink-400' : ''
+              }`}
+            >
+              Loto Prison
+            </Link>
+            <Link 
               to="/comment-jouer"
               className={`hover:text-yellow-400 transition ${location.pathname === '/comment-jouer' ? 'text-yellow-400' : ''}`}
             >
