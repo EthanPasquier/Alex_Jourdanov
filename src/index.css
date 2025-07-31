@@ -2,40 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Neon/Casino Animations */
-@keyframes neon-flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-    text-shadow:
-      0 0 8px #ff00b4,
-      0 0 16px #ff0059,
-      0 0 32px #a259ff;
-  }
-  20%, 22%, 24%, 55% {
-    opacity: 0.5;
-    text-shadow: none;
-  }
+/* Import des polices Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Animations subtiles */
+@keyframes gentle-fade {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
 }
-@keyframes neon-fade {
-  0% { opacity: 0.7; }
-  50% { opacity: 1; text-shadow: 0 0 16px #00eaff, 0 0 32px #ff00b4; }
-  100% { opacity: 0.7; }
+
+@keyframes subtle-glow {
+  0% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.3); }
+  50% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
+  100% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.3); }
 }
-@keyframes slot-anim {
-  0% { transform: translateY(-10px) scale(0.95) rotate(-2deg); opacity: 0.5; }
-  60% { transform: translateY(2px) scale(1.05) rotate(2deg); opacity: 1; }
-  100% { transform: none; opacity: 1; }
+
+@keyframes slide-up {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
-.neon-glow {
-  box-shadow: 0 0 16px #ff00b4, 0 0 32px #00eaff, 0 0 64px #a259ff;
-  border-color: #ff0059 !important;
+
+/* Classes utilitaires */
+.gentle-fade {
+  animation: gentle-fade 3s ease-in-out infinite;
 }
-.neon-flicker {
-  animation: neon-flicker 2.2s infinite alternate;
+
+.subtle-glow {
+  animation: subtle-glow 2s ease-in-out infinite;
 }
-.neon-fade {
-  animation: neon-fade 2.5s infinite;
+
+.slide-up {
+  animation: slide-up 0.6s ease-out forwards;
 }
-.slot-anim {
-  animation: slot-anim 0.7s cubic-bezier(.68,-0.55,.27,1.55) both;
+
+/* Style pour l'image de fond avec opacité et diffusion */
+.hero-bg {
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 4rem;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/unnamed.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.3;
+  filter: blur(1px);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Hover effects subtils */
+.game-card {
+  transition: all 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Boutons avec style gaming sobre */
+.game-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.game-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }

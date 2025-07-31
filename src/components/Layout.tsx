@@ -1,16 +1,14 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Building2 } from 'lucide-react';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
   
   return (
     <div
-      className="min-h-screen text-white"
+      className="min-h-screen text-game-text font-sans"
       style={{
-        background:
-          "radial-gradient(ellipse at top, #2d0036 0%, #0a0a23 100%)",
+        background: "linear-gradient(135deg, #0a0b1a 0%, #141526 100%)",
       }}
     >
       {/* Header */}
@@ -18,48 +16,41 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <nav className="flex justify-between items-center">
           <Link
             to="/"
-            className="flex items-center gap-2"
-            style={{
-              textShadow: "0 0 8px #ff0059, 0 0 16px #a259ff",
-            }}
+            className="flex items-center"
           >
-            <Building2 className="w-8 h-8 text-neon-pink drop-shadow-[0_2px_8px_rgba(255,0,120,0.7)]" />
-            <span className="text-2xl font-extrabold text-neon-pink tracking-widest">
+            <span className="text-2xl font-display font-bold text-game-gold tracking-wide">
               LOTO PRISON
             </span>
           </Link>
-          <div className="flex gap-4">
+          <div className="flex gap-6">
             <Link
               to="/loto-prison"
-              className={`hover:text-neon-pink transition font-bold ${
-                location.pathname === "/loto-prison" ? "text-neon-pink" : ""
+              className={`hover:text-game-gold transition-colors font-medium ${
+                location.pathname === "/loto-prison" ? "text-game-gold" : "text-game-text"
               }`}
-              style={{
-                textShadow: "0 0 8px #ff00b4, 0 0 16px #a259ff",
-              }}
             >
               Loto Prison
             </Link>
             <Link
               to="/comment-jouer"
-              className={`hover:text-neon-yellow transition ${
-                location.pathname === "/comment-jouer" ? "text-neon-yellow" : ""
+              className={`hover:text-game-gold transition-colors font-medium ${
+                location.pathname === "/comment-jouer" ? "text-game-gold" : "text-game-text"
               }`}
             >
-              Comment jouer ?
+              Comment participer ?
             </Link>
             <Link
               to="/affaire"
-              className={`hover:text-neon-yellow transition ${
-                location.pathname === "/affaire" ? "text-neon-yellow" : ""
+              className={`hover:text-game-gold transition-colors font-medium ${
+                location.pathname === "/affaire" ? "text-game-gold" : "text-game-text"
               }`}
             >
               L'affaire
             </Link>
             <Link
               to="/alex-jordanov"
-              className={`hover:text-neon-yellow transition ${
-                location.pathname === "/alex-jordanov" ? "text-neon-yellow" : ""
+              className={`hover:text-game-gold transition-colors font-medium ${
+                location.pathname === "/alex-jordanov" ? "text-game-gold" : "text-game-text"
               }`}
             >
               Alex Jordanov
@@ -69,26 +60,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-8">
         {children}
       </main>
 
       {/* Footer */}
-      <footer className="container mx-auto px-4 py-8 mt-16 border-t border-neon-pink">
+      <footer className="container mx-auto px-4 py-8 mt-16 border-t border-game-border">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-neon-blue text-center md:text-left drop-shadow-[0_2px_8px_rgba(0,234,255,0.7)]">
+          <div className="text-sm text-game-text-muted text-center md:text-left">
             © 2025 Loto Prison - Une initiative satirique pour la liberté de la presse
           </div>
           <div className="flex gap-4 text-sm">
             <Link
               to="/mentions-legales"
-              className="text-neon-purple hover:text-neon-yellow transition"
+              className="text-game-text-dim hover:text-game-gold transition-colors"
             >
               Mentions légales
             </Link>
             <Link
               to="/protection-donnees"
-              className="text-neon-purple hover:text-neon-yellow transition"
+              className="text-game-text-dim hover:text-game-gold transition-colors"
             >
               Protection des données
             </Link>

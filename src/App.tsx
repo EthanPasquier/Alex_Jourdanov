@@ -7,6 +7,8 @@ import { Case } from './pages/Case';
 import { Biography } from './pages/Biography';
 import LotoPrison from './pages/LotoPrison';
 import { Prize } from './pages/Prize';
+import { MentionsLegales } from './pages/MentionsLegales';
+import { ProtectionDonnees } from './pages/ProtectionDonnees';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/participer" element={<LotoPrison />} />
         <Route path="/prix" element={<Prize />} />
         <Route path="/loto-prison" element={<LotoPrison />} />
+        <Route path="/mentions-legales" element={<MentionsLegales />} />
+        <Route path="/protection-donnees" element={<ProtectionDonnees />} />
       </Routes>
     </Layout>
   );

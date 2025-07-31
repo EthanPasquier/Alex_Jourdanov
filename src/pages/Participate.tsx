@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { AlertCircle } from 'lucide-react';
 
 export function Participate() {
   const [formData, setFormData] = useState({
@@ -20,11 +19,13 @@ export function Participate() {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <h1 className="text-4xl font-bold mb-8 text-center">Faire mon pronostic</h1>
+      <h1 className="text-4xl font-display font-bold mb-8 text-center text-game-gold">
+        Faire mon pronostic
+      </h1>
 
-      <form onSubmit={handleSubmit} className="bg-slate-800/50 p-8 rounded-lg">
+      <form onSubmit={handleSubmit} className="bg-game-card p-8 rounded-lg border border-game-border">
         <div className="mb-6">
-          <label htmlFor="name" className="block text-sm font-medium mb-2">
+          <label htmlFor="name" className="block text-sm font-medium mb-2 text-game-text">
             Nom ou Pseudo
           </label>
           <input
@@ -32,13 +33,13 @@ export function Participate() {
             id="name"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-full px-4 py-2 rounded-lg bg-slate-700 border border-slate-600 focus:outline-none focus:border-yellow-400"
+            className="w-full px-4 py-2 rounded-lg bg-game-bg-light text-game-text border border-game-border focus:outline-none focus:border-game-gold transition-colors"
             required
           />
         </div>
 
         <div className="mb-6">
-          <label htmlFor="email" className="block text-sm font-medium mb-2">
+          <label htmlFor="email" className="block text-sm font-medium mb-2 text-game-text">
             Email
           </label>
           <input
@@ -46,17 +47,23 @@ export function Participate() {
             id="email"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full px-4 py-2 rounded-lg bg-slate-700 border border-slate-600 focus:outline-none focus:border-yellow-400"
+            className="w-full px-4 py-2 rounded-lg bg-game-bg-light text-game-text border border-game-border focus:outline-none focus:border-game-gold transition-colors"
             required
           />
         </div>
 
         <div className="mb-6">
-          <label className="block text-sm font-medium mb-2">
+          <label className="block text-sm font-medium mb-2 text-game-text">
             Votre pronostic
           </label>
           <div className="space-y-2">
-            {['Relaxe', 'Amende symbolique', 'Prison avec sursis', 'Prison ferme'].map((option) => (
+            {[
+              'Amende bien sale', 
+              'Grosse tarte dans la gueule', 
+              'Prison à vie', 
+              'Stage chez Hanouna', 
+              'Déradicalisation obligatoire de journalistes'
+            ].map((option) => (
               <label key={option} className="flex items-center gap-2">
                 <input
                   type="radio"
@@ -64,56 +71,45 @@ export function Participate() {
                   value={option}
                   checked={formData.prediction === option}
                   onChange={(e) => setFormData({ ...formData, prediction: e.target.value })}
-                  className="text-yellow-400 focus:ring-yellow-400 focus:ring-offset-slate-800"
+                  className="accent-game-gold focus:ring-game-gold"
                   required
                 />
-                {option}
+                <span className="text-game-text">{option}</span>
               </label>
             ))}
           </div>
         </div>
 
         <div className="mb-8">
-          <label className="block text-sm font-medium mb-2">
-            Montant du don
+          <label htmlFor="amount" className="block text-sm font-medium mb-2 text-game-text">
+            Montant de votre don (€)
           </label>
-          <div className="flex gap-4">
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                name="amount"
-                value="10"
-                checked={formData.amount === '10'}
-                onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
-                className="text-yellow-400 focus:ring-yellow-400 focus:ring-offset-slate-800"
-              />
-              10€
-            </label>
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                name="amount"
-                value="20"
-                checked={formData.amount === '20'}
-                onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
-                className="text-yellow-400 focus:ring-yellow-400 focus:ring-offset-slate-800"
-              />
-              20€
-            </label>
-          </div>
+          <input
+            type="number"
+            id="amount"
+            min="10"
+            step="1"
+            value={formData.amount}
+            onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
+            className="w-full px-4 py-2 rounded-lg bg-game-bg-light text-game-text border border-game-border focus:outline-none focus:border-game-gold transition-colors"
+            placeholder="Minimum suggéré : 10€"
+            required
+          />
+          <p className="text-xs text-game-text-muted mt-1">
+            Montant libre - Minimum suggéré : 10€
+          </p>
         </div>
 
-        <div className="bg-slate-700/50 p-4 rounded-lg mb-8 flex items-start gap-3">
-          <AlertCircle className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
-          <p className="text-sm text-slate-300">
-            En participant, vous acceptez que votre don soit utilisé pour la défense d'Alex Jordanov. 
+        <div className="bg-game-bg-light p-4 rounded-lg mb-8 border border-game-border">
+          <p className="text-sm text-game-text-muted">
+            ⚠️ En participant, vous acceptez que votre don soit utilisé pour la défense d'Alex Jordanov. 
             Les données personnelles ne seront utilisées que pour vous contacter en cas de victoire.
           </p>
         </div>
 
         <button
           type="submit"
-          className="w-full bg-yellow-400 text-slate-900 py-3 rounded-lg font-bold hover:bg-yellow-300 transition"
+          className="w-full game-button bg-game-gold text-game-bg py-3 rounded-lg font-bold hover:bg-game-gold-light transition-all"
         >
           Valider mon pronostic
         </button>
