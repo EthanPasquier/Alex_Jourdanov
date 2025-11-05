@@ -20,8 +20,8 @@ export function HowToPlay() {
 
       {/* Présentation de l'affaire */}
       <div className="bg-game-card rounded-xl p-8 mb-16 border border-game-red-light border-2">
-        <h2 className="text-2xl font-bold mb-6 text-center text-game-red-light">⚖️ L'Affaire Alex Jordanov</h2>
-        
+        <h2 className="text-2xl font-bold mb-6 text-center text-game-red-light">L'Affaire Alex Jordanov</h2>
+
         <div className="grid gap-6">
           <div className="bg-game-bg-light rounded-lg p-6 border border-game-border">
             <h3 className="text-lg font-bold text-game-gold mb-4">Pourquoi est-il poursuivi ?</h3>
@@ -33,7 +33,7 @@ export function HowToPlay() {
           </div>
 
           <div className="bg-game-bg-light rounded-lg p-6 border border-game-border">
-            <h3 className="text-lg font-bold text-game-red-light mb-4">⚠️ Peines encourues</h3>
+            <h3 className="text-lg font-bold text-game-red-light mb-4">Peines encourues</h3>
             <div className="text-game-text space-y-2">
               <p className="text-xl font-bold">Jusqu'à <span className="text-game-red-light">10 ans de prison</span> et <span className="text-game-red-light">150 000 € d'amende</span></p>
               <p><strong>Circonstances aggravantes :</strong> les sources seraient issues de fonctionnaires soumis au secret</p>
@@ -42,7 +42,7 @@ export function HowToPlay() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-game-bg-light rounded-lg p-6 border border-game-border">
-              <h3 className="text-lg font-bold text-game-gold mb-4">🛡️ Défense</h3>
+              <h3 className="text-lg font-bold text-game-gold mb-4">Défense</h3>
               <ul className="text-game-text list-disc list-inside space-y-2">
                 <li>Journaliste d'investigation</li>
                 <li>Liberté d'informer</li>
@@ -52,7 +52,7 @@ export function HowToPlay() {
             </div>
 
             <div className="bg-game-bg-light rounded-lg p-6 border border-game-border">
-              <h3 className="text-lg font-bold text-game-red-light mb-4">🎯 Enjeux</h3>
+              <h3 className="text-lg font-bold text-game-red-light mb-4">Enjeux</h3>
               <p className="text-game-text font-semibold">
                 Procès d'intimidation contre un journaliste
               </p>
@@ -83,9 +83,9 @@ export function HowToPlay() {
             Celui ou celle qui aura deviné la peine exacte remportera :
           </p>
           <ul className="text-game-text space-y-2 list-disc list-inside">
-            <li>🏆 Un trophée honteux remis avec dignité</li>
-            <li>🍽 Un dîner avec Alex (libre, espérons-le)</li>
-            <li>🥇 Et surtout, l'honneur d'avoir compris l'absurde mieux que quiconque</li>
+            <li>Un trophée honteux remis avec dignité</li>
+            <li>Un dîner avec Alex (libre, espérons-le)</li>
+            <li>Et surtout, l'honneur d'avoir compris l'absurde mieux que quiconque</li>
           </ul>
         </div>
       </div>

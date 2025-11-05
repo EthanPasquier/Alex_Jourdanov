@@ -69,22 +69,22 @@ export function Biography() {
         
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-game-card p-6 rounded-lg border border-game-border">
-            <h3 className="font-bold mb-2 text-game-text">🕵️ Services secrets</h3>
+            <h3 className="font-bold mb-2 text-game-text">Services secrets</h3>
             <p className="text-game-text-muted">Investigation sur les services de renseignement français et internationaux</p>
           </div>
-          
+
           <div className="bg-game-card p-6 rounded-lg border border-game-border">
-            <h3 className="font-bold mb-2 text-game-text">⚔️ Conflits armés</h3>
+            <h3 className="font-bold mb-2 text-game-text">Conflits armés</h3>
             <p className="text-game-text-muted">Couverture des zones de guerre et conflits internationaux</p>
           </div>
-          
+
           <div className="bg-game-card p-6 rounded-lg border border-game-border">
-            <h3 className="font-bold mb-2 text-game-text">🌐 Réseaux d'influence</h3>
+            <h3 className="font-bold mb-2 text-game-text">Réseaux d'influence</h3>
             <p className="text-game-text-muted">Enquêtes sur les mafias internationales et réseaux de pouvoir</p>
           </div>
-          
+
           <div className="bg-game-card p-6 rounded-lg border border-game-border">
-            <h3 className="font-bold mb-2 text-game-text">📺 Documentaires</h3>
+            <h3 className="font-bold mb-2 text-game-text">Documentaires</h3>
             <p className="text-game-text-muted">Réalisations pour Canal+, France TV, Arte, National Geographic</p>
           </div>
         </div>
@@ -117,7 +117,7 @@ export function Biography() {
         
         <div className="grid gap-6 mb-8">
           <div className="bg-game-bg-light rounded-lg p-6 border border-game-border">
-            <h3 className="text-lg font-bold text-game-gold mb-4">🌟 Reconnaissance médiatique</h3>
+            <h3 className="text-lg font-bold text-game-gold mb-4">Reconnaissance médiatique</h3>
             <div className="space-y-3">
               <blockquote className="text-game-text italic">
                 "Ovni du paysage audiovisuel français"
@@ -131,7 +131,7 @@ export function Biography() {
           </div>
 
           <div className="bg-game-bg-light rounded-lg p-6 border border-game-border">
-            <h3 className="text-lg font-bold text-game-gold mb-4">🛡️ Soutiens institutionnels</h3>
+            <h3 className="text-lg font-bold text-game-gold mb-4">Soutiens institutionnels</h3>
             <div className="space-y-3">
               <div className="text-game-text">
                 <strong>Reporters sans frontières</strong> dénonce une <em>"intimidation politique"</em>

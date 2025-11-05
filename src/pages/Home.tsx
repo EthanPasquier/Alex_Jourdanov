@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export function Home() {
+  const [daysUntilTrial, setDaysUntilTrial] = useState<number>(0);
+
+  useEffect(() => {
+    const calculateDaysUntilTrial = () => {
+      const trialDate = new Date('2026-03-01T00:00:00');
+      const today = new Date();
+      const diffTime = trialDate.getTime() - today.getTime();
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      setDaysUntilTrial(diffDays > 0 ? diffDays : 0);
+    };
+
+    calculateDaysUntilTrial();
+    // Mettre à jour chaque jour
+    const interval = setInterval(calculateDaysUntilTrial, 1000 * 60 * 60 * 24);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="text-center">
       {/* Section héro avec image de fond */}
@@ -45,15 +63,15 @@ export function Home() {
       {/* Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
         <div className="game-card bg-game-card p-8 rounded-lg border border-game-border">
-          <div className="text-3xl font-bold mb-2 text-game-gold">1,234</div>
+          <div className="text-3xl font-bold mb-2 text-game-gold">0</div>
           <div className="text-game-text-muted font-medium">Participants</div>
         </div>
         <div className="game-card bg-game-card p-8 rounded-lg border border-game-border">
-          <div className="text-3xl font-bold mb-2 text-game-gold">24,680€</div>
+          <div className="text-3xl font-bold mb-2 text-game-gold">0€</div>
           <div className="text-game-text-muted font-medium">Somme récoltée</div>
         </div>
         <div className="game-card bg-game-card p-8 rounded-lg border border-game-border">
-          <div className="text-3xl font-bold mb-2 text-game-red-light">14</div>
+          <div className="text-3xl font-bold mb-2 text-game-red-light">{daysUntilTrial}</div>
           <div className="text-game-text-muted font-medium">Jours avant le procès</div>
         </div>
       </div>

@@ -21,16 +21,19 @@ export function Case() {
 
       {/* Charges */}
       <div className="bg-game-card p-8 rounded-lg mb-16 border border-game-border">
-        <h2 className="text-2xl font-bold mb-6 text-game-red-light">Il encourt jusqu'à 7 ans de prison, poursuivi pour :</h2>
+        <h2 className="text-2xl font-bold mb-6 text-game-red-light">Mis en examen des chefs de :</h2>
         <ul className="list-disc list-inside space-y-3 text-game-text mb-6">
-          <li>divulgation de secrets de la défense nationale,</li>
-          <li>recel de violation du secret professionnel,</li>
-          <li>recel de violation du secret de l'instruction,</li>
-          <li>et surtout, révélation d'informations permettant d'identifier une source.</li>
+          <li>Appropriation et divulgation de secret défense</li>
+          <li>Recel de violation du secret professionnel</li>
+          <li>Recel de violation du secret de l'instruction</li>
+          <li>Révélation d'information permettant l'identification d'une source</li>
         </ul>
+        <p className="text-game-text-muted mb-4">
+          Il encourt jusqu'à 10 ans de prison.
+        </p>
         <p className="text-game-text-muted">
-          Les accusations s'appuient sur des rapprochements flous entre le contenu du livre, des témoignages, 
-          des messages cryptés et un carnet découvert "par hasard". Un procès au goût amer, qui criminalise 
+          Les accusations s'appuient sur des rapprochements flous entre le contenu du livre, des témoignages,
+          des messages cryptés et un carnet découvert "par hasard". Un procès au goût amer, qui criminalise
           le journalisme indépendant.
         </p>
       </div>

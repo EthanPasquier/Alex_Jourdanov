@@ -16,21 +16,21 @@ export function Prize() {
         <div className="grid gap-6">
           <div className="flex items-center gap-4">
             <div className="text-left">
-              <h3 className="font-bold mb-1 text-game-text">🏆 Un trophée honteux</h3>
+              <h3 className="font-bold mb-1 text-game-text">Un trophée honteux</h3>
               <p className="text-game-text-muted">Remis avec toute la dignité que mérite cette farce judiciaire</p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <div className="text-left">
-              <h3 className="font-bold mb-1 text-game-text">🍽 Un dîner avec Alex</h3>
+              <h3 className="font-bold mb-1 text-game-text">Un dîner avec Alex</h3>
               <p className="text-game-text-muted">Une soirée unique avec le journaliste (libre, espérons-le)</p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <div className="text-left">
-              <h3 className="font-bold mb-1 text-game-text">🥇 L'honneur ultime</h3>
+              <h3 className="font-bold mb-1 text-game-text">L'honneur ultime</h3>
               <p className="text-game-text-muted">Avoir compris l'absurde mieux que quiconque</p>
             </div>
           </div>
