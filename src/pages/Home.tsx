@@ -14,85 +14,269 @@ export function Home() {
     };
 
     calculateDaysUntilTrial();
-    // Mettre à jour chaque jour
     const interval = setInterval(calculateDaysUntilTrial, 1000 * 60 * 60 * 24);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="text-center">
-      {/* Section héro avec image de fond */}
-      <div className="hero-bg py-16 mb-16">
-        <div className="hero-content">
-          <h1 className="text-5xl font-display font-bold mb-6 text-game-gold">
+    <div className="glass-gradient-bg min-h-screen">
+
+      {/* Hero Section */}
+      <div className="relative min-h-[85vh] flex items-center justify-center px-4 py-16">
+        <div className="max-w-5xl mx-auto text-center">
+
+          {/* Badge */}
+          <div className="inline-block glass-card px-6 py-2 rounded-full mb-6">
+            <span className="text-sm font-semibold text-game-gold uppercase tracking-wider">
+              Procès politique • Mars 2026
+            </span>
+          </div>
+
+          {/* Titre principal */}
+          <h1 className="text-6xl md:text-8xl font-display font-bold mb-6 text-game-gold slide-up">
             LOTO PRISON
           </h1>
-          <p className="text-2xl mb-6 text-game-text-muted font-medium">
+
+          {/* Sous-titre */}
+          <p className="text-2xl md:text-3xl mb-8 text-game-text font-medium slide-up">
             Un jeu absurde pour un procès politique.
           </p>
-          <div className="max-w-2xl mx-auto mb-8 text-game-text">
-            <p className="mb-4 text-lg">
-              Alex Jordanov, journaliste d'investigation, passe en procès. Son crime ? Avoir fait son métier.
+
+          {/* Description */}
+          <div className="glass-card rounded-3xl p-8 md:p-10 mb-10 max-w-3xl mx-auto slide-up">
+            <p className="text-lg md:text-xl text-game-text-muted leading-relaxed mb-4">
+              Alex Jourdanov, journaliste d'investigation, passe en procès. Son crime ?
+              <strong className="text-game-gold"> Avoir fait son métier.</strong>
             </p>
-            <p className="mb-4 text-lg">
-              Puisque la justice semble vouloir faire un exemple, sans base solide, nous avons décidé de répondre par le hasard.
+            <p className="text-lg md:text-xl text-game-text-muted leading-relaxed mb-4">
+              Puisque la justice semble vouloir faire un exemple sans base solide,
+              nous avons décidé de répondre par le hasard.
             </p>
-            <p className="text-xl text-game-gold-light italic font-medium">
-              Ce n'est plus un verdict judiciaire. C'est une roulette politique. Alors autant en faire un jeu : bienvenue dans le LOTO PRISON.
+            <p className="text-xl md:text-2xl text-game-gold italic font-semibold">
+              Ce n'est plus un verdict judiciaire. C'est une roulette politique.
+              Alors autant en faire un jeu.
             </p>
           </div>
-          
-          <div className="flex justify-center gap-6 mb-12">
-            <Link 
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 slide-up">
+            <Link
               to="/loto-prison"
-              className="game-button bg-game-gold text-game-bg px-8 py-3 rounded-lg font-bold hover:bg-game-gold-light transition-all"
+              className="glass-button px-10 py-4 rounded-2xl font-bold text-lg text-game-bg hover:text-game-bg transition-all"
             >
               JOUER MAINTENANT
             </Link>
-            <Link 
+            <Link
               to="/affaire"
-              className="game-button border-2 border-game-gold text-game-gold px-8 py-3 rounded-lg font-bold hover:bg-game-gold hover:text-game-bg transition-all"
+              className="glass-card-hover px-10 py-4 rounded-2xl font-bold text-lg text-game-gold border-2 border-game-gold/30 hover:border-game-gold transition-all"
             >
               COMPRENDRE L'AFFAIRE
             </Link>
           </div>
+
+          {/* Scroll indicator */}
+          <div className="mt-12 animate-bounce">
+            <div className="w-6 h-10 border-2 border-game-gold/50 rounded-full mx-auto flex items-start justify-center p-2">
+              <div className="w-1.5 h-3 bg-game-gold rounded-full"></div>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
-        <div className="game-card bg-game-card p-8 rounded-lg border border-game-border">
-          <div className="text-3xl font-bold mb-2 text-game-gold">0</div>
-          <div className="text-game-text-muted font-medium">Participants</div>
-        </div>
-        <div className="game-card bg-game-card p-8 rounded-lg border border-game-border">
-          <div className="text-3xl font-bold mb-2 text-game-gold">0€</div>
-          <div className="text-game-text-muted font-medium">Somme récoltée</div>
-        </div>
-        <div className="game-card bg-game-card p-8 rounded-lg border border-game-border">
-          <div className="text-3xl font-bold mb-2 text-game-red-light">{daysUntilTrial}</div>
-          <div className="text-game-text-muted font-medium">Jours avant le procès</div>
+      {/* Stats Section */}
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <div className="glass-card glass-card-hover rounded-3xl p-8 text-center">
+            <div className="text-5xl font-bold mb-3 text-game-gold">0</div>
+            <div className="text-game-text-muted font-medium uppercase tracking-wide text-sm">
+              Participants
+            </div>
+            <p className="text-xs text-game-text-dim mt-2">
+              Rejoignez le mouvement
+            </p>
+          </div>
+
+          <div className="glass-card glass-card-hover rounded-3xl p-8 text-center">
+            <div className="text-5xl font-bold mb-3 text-game-gold">0€</div>
+            <div className="text-game-text-muted font-medium uppercase tracking-wide text-sm">
+              Somme récoltée
+            </div>
+            <p className="text-xs text-game-text-dim mt-2">
+              Pour la défense d'Alex
+            </p>
+          </div>
+
+          <div className="glass-card glass-card-hover rounded-3xl p-8 text-center border-2 border-game-red-light/30">
+            <div className="text-5xl font-bold mb-3 text-game-red-light">{daysUntilTrial}</div>
+            <div className="text-game-text-muted font-medium uppercase tracking-wide text-sm">
+              Jours avant le procès
+            </div>
+            <p className="text-xs text-game-text-dim mt-2">
+              Mars 2026
+            </p>
+          </div>
+
         </div>
       </div>
 
-      {/* Encart Prix Absurde */}
-      <div className="bg-game-card rounded-xl p-8 max-w-4xl mx-auto border border-game-border">
-        <h2 className="text-2xl font-display font-bold mb-6 text-game-gold">
-          Le Prix Loto Prison 2025
-        </h2>
-        <p className="text-lg text-game-text mb-6">
-          Un trophée honteux remis dans la dignité, un dîner avec Alex (libre, espérons-le), et l'honneur d'avoir compris l'absurde mieux que quiconque.
-        </p>
-        <div className="flex justify-center">
-          <Link 
+      {/* Comment ça marche */}
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-game-gold mb-4">
+            Comment ça marche ?
+          </h2>
+          <p className="text-game-text-muted text-lg">
+            Un concept simple pour soutenir un combat important
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+
+          <div className="glass-card glass-card-hover rounded-3xl p-8 text-center">
+            <div className="w-16 h-16 glass-card rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl">
+              🎯
+            </div>
+            <h3 className="text-xl font-bold text-game-gold mb-3">Choisissez vos peines</h3>
+            <p className="text-game-text-muted leading-relaxed">
+              Sélectionnez parmi 23 peines, du sérieux à l'absurde, pour prédire
+              ce que la justice pourrait décider.
+            </p>
+          </div>
+
+          <div className="glass-card glass-card-hover rounded-3xl p-8 text-center">
+            <div className="w-16 h-16 glass-card rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl">
+              💰
+            </div>
+            <h3 className="text-xl font-bold text-game-gold mb-3">Soutenez Alex</h3>
+            <p className="text-game-text-muted leading-relaxed">
+              Faites un don du montant de votre choix. 100% des fonds vont à la
+              défense juridique d'Alex Jourdanov.
+            </p>
+          </div>
+
+          <div className="glass-card glass-card-hover rounded-3xl p-8 text-center">
+            <div className="w-16 h-16 glass-card rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl">
+              🏆
+            </div>
+            <h3 className="text-xl font-bold text-game-gold mb-3">Gagnez un prix</h3>
+            <p className="text-game-text-muted leading-relaxed">
+              Le participant le plus proche du verdict remporte le Prix Loto Prison
+              et un dîner avec Alex.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      {/* L'affaire en bref */}
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        <div className="glass-card rounded-3xl p-10 md:p-12">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-game-gold mb-8 text-center">
+            L'affaire en bref
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+
+            {/* Image d'Alex */}
+            <div className="order-2 md:order-1">
+              <div className="glass-card rounded-2xl p-4 glass-card-hover">
+                <img
+                  src="/unnamed.png"
+                  alt="Alex Jourdanov"
+                  className="w-full h-auto rounded-xl object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Texte */}
+            <div className="space-y-6 text-game-text-muted order-1 md:order-2">
+              <p className="text-lg leading-relaxed">
+                <strong className="text-game-text">Alex Jourdanov</strong> est un journaliste d'investigation
+                poursuivi pour avoir révélé des informations d'intérêt public.
+              </p>
+
+              <div className="glass-card rounded-2xl p-6">
+                <p className="text-sm font-semibold text-game-gold mb-3">Les accusations :</p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-game-gold">•</span>
+                    <span>Appropriation et divulgation de secret défense</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-game-gold">•</span>
+                    <span>Recel de violation du secret professionnel</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-game-gold">•</span>
+                    <span>Recel de violation du secret de l'instruction</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-game-gold">•</span>
+                    <span>Révélation d'information permettant l'identification d'une source</span>
+                  </li>
+                </ul>
+              </div>
+
+              <p className="text-lg leading-relaxed">
+                Il encourt jusqu'à <strong className="text-game-red-light text-xl">10 ans de prison</strong>
+                pour avoir exercé son métier de journaliste.
+              </p>
+
+              <div className="pt-4">
+                <Link
+                  to="/affaire"
+                  className="inline-flex items-center gap-2 text-game-gold hover:text-game-gold-light transition-colors font-semibold"
+                >
+                  En savoir plus sur l'affaire
+                  <span>→</span>
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      {/* Prix Section */}
+      <div className="max-w-4xl mx-auto px-4 py-16">
+        <div className="glass-card rounded-3xl p-10 md:p-12 border-2 border-game-gold/30 text-center">
+          <div className="text-5xl mb-4">🏆</div>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-game-gold mb-6">
+            Le Prix Loto Prison 2026
+          </h2>
+          <p className="text-lg text-game-text-muted leading-relaxed mb-8 max-w-2xl mx-auto">
+            Un trophée honteux remis dans la dignité, un dîner avec Alex (libre, espérons-le),
+            et l'honneur d'avoir compris l'absurde mieux que quiconque.
+          </p>
+          <Link
             to="/prix"
-            className="text-game-gold hover:text-game-gold-light transition-colors font-medium"
+            className="glass-button inline-block px-8 py-3 rounded-2xl font-bold text-game-bg hover:text-game-bg transition-all"
           >
-            En savoir plus sur les prix →
+            Découvrir les prix
           </Link>
         </div>
       </div>
+
+      {/* CTA Final */}
+      <div className="max-w-4xl mx-auto px-4 py-16 pb-24">
+        <div className="glass-card rounded-3xl p-12 md:p-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-game-gold mb-6">
+            Prêt à participer ?
+          </h2>
+          <p className="text-xl text-game-text-muted mb-8 max-w-2xl mx-auto">
+            Faites vos pronostics, soutenez la liberté de la presse, et participez à ce combat absurde contre l'arbitraire.
+          </p>
+          <Link
+            to="/loto-prison"
+            className="glass-button inline-block px-12 py-5 rounded-2xl font-bold text-xl text-game-bg hover:text-game-bg transition-all"
+          >
+            PARTICIPER AU LOTO PRISON
+          </Link>
+        </div>
+      </div>
+
     </div>
   );
 }
