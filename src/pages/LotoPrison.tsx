@@ -1,25 +1,24 @@
 import React, { useState } from "react";
 
 const PEINES = [
-  { label: "Amende pénale (1 000 € – 50 000 €)", value: "amende" },
   { label: "Travail d'intérêt général (TIG)", value: "tig" },
   { label: "Grosse tarte dans la gueule", value: "tarte_gueule" },
   { label: "Peine d'emprisonnement avec sursis", value: "prison_sursis" },
   { label: "Prison ferme (- 10 ans)", value: "prison_ferme" },
   { label: "Prison à vie", value: "prison_vie" },
-  { label: "Interdiction d'exercer le journalisme (1 à 5 ans)", value: "interdiction_journalisme" },
+  { label: "Interdiction d'exercer le journalisme (temporaires — 1 à 5 ans)", value: "interdiction_journalisme" },
   { label: "Fessée publique par Gérald D.", value: "fessee_gerald" },
   { label: "Saisie du matériel professionnel (stylos, dictaphones, disques durs)", value: "saisie_materiel" },
   { label: "Exil en Russie", value: "exil_russie" },
   { label: "Déchéance de « nationalité bulgaro-parisienne »", value: "decheance_bulgaro" },
-  { label: "Bracelet électronique (placement sous surveillance)", value: "bracelet" },
-  { label: "Rectificatif obligatoire dans Valeurs Actuelles accompagné d'un selfie avec le ministre", value: "rectificatif_va" },
+  { label: "Bracelet électronique", value: "bracelet" },
+  { label: "Rectificatif obligatoire dans Valeurs Actuelles", value: "rectificatif_va" },
   { label: "Stage chez Hanouna", value: "stage_hanouna" },
   { label: "Livraison de croissants aux anciens directeurs du renseignement", value: "croissants_dgsi" },
   { label: "Internement à l'INA — 40 ans de JT en boucle", value: "ina_jt" },
   { label: "Interdiction de parler à Mediapart pendant 12 ans", value: "interdiction_mediapart" },
   { label: "Retrait d'accréditation / suspension de visa de presse", value: "retrait_accreditation" },
-  { label: "Dommages et intérêts civils (indemnisation des parties lésées)", value: "dommages_interets" },
+  { label: "Dommages et intérêts civils", value: "dommages_interets" },
   { label: "Rédaction d'un roman feel-good chez Albin Michel", value: "roman_feelgood" },
   { label: "Retrait de passeport", value: "retrait_passeport" },
   { label: "Formation DGSI", value: "formation_dgsi" },
@@ -139,21 +138,23 @@ export default function LotoPrison() {
 
         {/* Section Peines */}
         <div className="glass-card rounded-3xl p-6 md:p-8">
-          <h2 className="text-2xl font-display font-bold text-game-gold mb-2 text-center">
-            Misez sur les peines
+          <h2 className="text-2xl font-display font-bold text-game-gold mb-4 text-center">
+            Votez
           </h2>
-          <p className="text-center text-game-text-muted mb-6 text-sm">
-            De vraies peines juridiques aux sanctions complètement farfelues
+          <p className="text-center text-game-text-muted text-sm mb-6 flex items-center justify-center gap-2">
+            <span>Faites défiler pour voir toutes les peines</span>
+            <span className="text-game-gold animate-bounce">↓</span>
           </p>
 
-          <div className="grid md:grid-cols-2 gap-3 max-h-96 overflow-y-auto pr-2">
+          <div className="relative">
+            <div className="grid md:grid-cols-2 gap-5 max-h-96 overflow-y-auto pr-2">
             {PEINES.map((peine) => (
               <label
                 key={peine.value}
-                className={`glass-card-hover flex items-start gap-3 rounded-xl px-4 py-3 cursor-pointer ${
+                className={`glass-card-hover flex items-start gap-4 rounded-xl px-5 py-4 cursor-pointer transition-all duration-200 border-2 ${
                   selectedPeines.includes(peine.value)
-                    ? "bg-game-gold/20 border-game-gold"
-                    : ""
+                    ? "bg-game-gold/20 border-game-gold shadow-lg shadow-game-gold/20"
+                    : "border-transparent hover:border-game-gold/30"
                 }`}
               >
                 <input
@@ -161,11 +162,14 @@ export default function LotoPrison() {
                   value={peine.value}
                   checked={selectedPeines.includes(peine.value)}
                   onChange={() => handlePeineChange(peine.value)}
-                  className="glass-checkbox mt-0.5 flex-shrink-0"
+                  className="glass-checkbox mt-0.5 flex-shrink-0 w-5 h-5"
                 />
-                <span className="text-sm text-game-text leading-tight">{peine.label}</span>
+                <span className="text-sm text-game-text leading-snug">{peine.label}</span>
               </label>
             ))}
+            </div>
+            {/* Gradient fade pour indiquer le scroll */}
+            <div className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none bg-gradient-to-t from-game-card via-game-card/50 to-transparent"></div>
           </div>
 
           {selectedPeines.length > 0 && (
@@ -188,7 +192,7 @@ export default function LotoPrison() {
         {/* Formulaire de don */}
         <form onSubmit={handleSubmit} className="glass-card rounded-3xl p-6 md:p-8">
           <h2 className="text-2xl font-display font-bold text-game-gold mb-6 text-center">
-            Soutenez Alex
+            Misez et soutenez
           </h2>
 
           <div className="space-y-4">
@@ -240,7 +244,7 @@ export default function LotoPrison() {
             {/* Email */}
             <div>
               <label htmlFor="email" className="block text-game-text font-semibold mb-2">
-                Email (optionnel)
+                Email *
               </label>
               <input
                 type="email"
@@ -248,6 +252,7 @@ export default function LotoPrison() {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="glass-input w-full px-4 py-3 rounded-xl text-game-text"
+                required
               />
             </div>
           </div>

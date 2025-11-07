@@ -18,9 +18,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
             to="/"
             className="flex items-center"
           >
-            <span className="text-2xl font-display font-bold text-game-gold tracking-wide">
-              LOTO PRISON
-            </span>
+            <img
+              src="/logo.jpeg"
+              alt="Loto Prison"
+              className="h-16 w-auto object-contain"
+            />
           </Link>
           <div className="flex gap-6">
             <Link
@@ -29,7 +31,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 location.pathname === "/loto-prison" ? "text-game-gold" : "text-game-text"
               }`}
             >
-              Loto Prison
+              Jouez
             </Link>
             <Link
               to="/comment-jouer"
