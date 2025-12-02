@@ -29,7 +29,7 @@ export function Case() {
           <li>Révélation d'information permettant l'identification d'une source</li>
         </ul>
         <p className="text-game-text-muted mb-4">
-          Il encourt jusqu'à 7 ans de prison.
+          Il encourt jusqu'à 7 ans de prison et 100 000 euros d'amende.
         </p>
         <p className="text-game-text-muted">
           Les accusations s'appuient sur des rapprochements flous entre le contenu du livre, des témoignages,

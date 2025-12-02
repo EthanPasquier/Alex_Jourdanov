@@ -126,7 +126,7 @@ export default function LotoPrison() {
           </h2>
           <p className="text-game-text-muted mb-4">
             Alex jordanov  est mis en examen pour avoir révélé des informations d'intérêt public.
-            Il encourt jusqu'à <strong className="text-game-gold">7 ans de prison</strong>.
+            Il encourt jusqu'à <strong className="text-game-gold">7 ans de prison et 100 000 euros d'amende</strong>.
           </p>
           <div className="space-y-2">
             <p className="text-sm font-semibold text-game-text mb-2">Chefs d'accusation :</p>

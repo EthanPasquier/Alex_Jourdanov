@@ -220,7 +220,7 @@ export function Home() {
               </div>
 
               <p className="text-lg leading-relaxed">
-                Il encourt jusqu'à <strong className="text-game-red-light text-xl">7 ans de prison</strong>
+                Il encourt jusqu'à <strong className="text-game-red-light text-xl">7 ans de prison et 100 000 euros d'amende</strong>
                 pour avoir exercé son métier de journaliste.
               </p>
 
