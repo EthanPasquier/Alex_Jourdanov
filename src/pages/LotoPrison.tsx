@@ -6,7 +6,7 @@ const PEINES = [
   { label: "Peine d'emprisonnement avec sursis", value: "prison_sursis" },
   { label: "Fessée publique par Gérald D.", value: "fessee_gerald" },
   { label: "Bracelet électronique", value: "bracelet" },
-  { label: "controle judiciaire 10 ans", value: "controle_judiciaire" }
+  { label: "controle judiciaire 10 ans", value: "controle_judiciaire" },
   { label: "Stage chez Hanouna", value: "stage_hanouna" },
   { label: "Prison ferme (- 7 ans)", value: "prison_ferme" },
   { label: "Prison à vie", value: "prison_vie" },
