@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface MobileMenuProps {
@@ -8,22 +8,28 @@ interface MobileMenuProps {
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const location = useLocation();
+  const [canClose, setCanClose] = useState(false);
+  const previousPathRef = useRef(location.pathname);
 
   // Fermer le menu lors du changement de route
   useEffect(() => {
-    onClose();
+    if (location.pathname !== previousPathRef.current) {
+      onClose();
+      previousPathRef.current = location.pathname;
+    }
   }, [location.pathname, onClose]);
 
   // Empêcher le scroll du body quand le menu est ouvert
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      // Petit délai avant de pouvoir fermer le menu via le backdrop
+      setCanClose(false);
+      const timer = setTimeout(() => setCanClose(true), 100);
+      return () => clearTimeout(timer);
     } else {
       document.body.style.overflow = '';
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [isOpen]);
 
   // Fermer avec la touche Escape
@@ -37,6 +43,12 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     return () => window.removeEventListener('keydown', handleEscape);
   }, [isOpen, onClose]);
 
+  const handleBackdropClick = () => {
+    if (canClose) {
+      onClose();
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -44,7 +56,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
-        onClick={onClose}
+        onClick={handleBackdropClick}
         aria-hidden="true"
       />
 
