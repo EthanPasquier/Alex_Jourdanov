@@ -241,18 +241,18 @@ export function Home() {
 
       {/* Prix Section */}
       <div className="max-w-4xl mx-auto px-4 py-8 sm:py-12 md:py-16">
-        <div className="glass-card rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 border-2 border-game-gold/30 text-center">
-          <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">🏆</div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-game-gold mb-4 sm:mb-6">
+        <div className="glass-card rounded-3xl p-8 sm:p-12 md:p-16 border-2 border-game-gold/30 text-center">
+          <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">🏆</div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-game-gold mb-4 sm:mb-6">
             Le Prix Loto Prison 2026
           </h2>
-          <p className="text-lg sm:text-xl text-game-text-muted leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-game-text-muted leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto">
             Un trophée honteux remis dans la dignité, un dîner avec Alex (libre, espérons-le),
             et l'honneur d'avoir compris l'absurde mieux que quiconque.
           </p>
           <Link
             to="/prix"
-            className="glass-button inline-block px-6 py-3 sm:px-8 rounded-2xl font-bold text-base sm:text-lg text-game-bg hover:text-game-bg transition-all"
+            className="glass-button inline-block px-8 py-4 sm:px-10 sm:py-5 md:px-12 rounded-2xl font-bold text-lg sm:text-xl text-game-bg hover:text-game-bg transition-all"
           >
             Découvrir les prix
           </Link>
