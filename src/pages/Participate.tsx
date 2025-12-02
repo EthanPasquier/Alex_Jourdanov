@@ -12,14 +12,21 @@ export function Participate() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Construction de l'URL Donorbox avec les paramètres
-    let url = "https://donorbox.org/soutien-a-alex-jordanov-proces?";
-    url += `amount=${encodeURIComponent(formData.amount)}`;
-    if (formData.firstName) url += `&first_name=${encodeURIComponent(formData.firstName)}`;
-    if (formData.lastName) url += `&last_name=${encodeURIComponent(formData.lastName)}`;
-    if (formData.email) url += `&email=${encodeURIComponent(formData.email)}`;
-    if (formData.prediction) url += `&custom_1=${encodeURIComponent(formData.prediction)}`;
+    // URL de base Donorbox
+    const baseUrl = "https://donorbox.org/soutien-a-alex-jordanov-proces";
+    const params = new URLSearchParams();
 
+    // Paramètres Donorbox standards
+    if (formData.amount) params.append('default_interval', 'o'); // one-time
+    if (formData.amount) params.append('amount', formData.amount);
+    if (formData.firstName) params.append('first_name', formData.firstName);
+    if (formData.lastName) params.append('last_name', formData.lastName);
+    if (formData.email) params.append('email', formData.email);
+
+    // Champ personnalisé pour le pronostic
+    if (formData.prediction) params.append('designation', `Pronostic: ${formData.prediction}`);
+
+    const url = `${baseUrl}?${params.toString()}`;
     window.open(url, '_blank');
   };
 

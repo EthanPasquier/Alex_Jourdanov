@@ -60,13 +60,21 @@ export default function LotoPrison() {
       .filter(Boolean)
       .join(", ");
 
-    let url = "https://donorbox.org/soutien-a-alex-jordanov-proces?";
-    url += `amount=${encodeURIComponent(formData.montant)}`;
-    if (formData.prenom) url += `&first_name=${encodeURIComponent(formData.prenom)}`;
-    if (formData.nom) url += `&last_name=${encodeURIComponent(formData.nom)}`;
-    if (formData.email) url += `&email=${encodeURIComponent(formData.email)}`;
-    if (peinesTexte) url += `&custom_1=${encodeURIComponent(peinesTexte)}`;
+    // URL de base Donorbox
+    const baseUrl = "https://donorbox.org/soutien-a-alex-jordanov-proces";
+    const params = new URLSearchParams();
 
+    // Paramètres Donorbox standards
+    if (formData.montant) params.append('default_interval', 'o'); // one-time
+    if (formData.montant) params.append('amount', formData.montant);
+    if (formData.prenom) params.append('first_name', formData.prenom);
+    if (formData.nom) params.append('last_name', formData.nom);
+    if (formData.email) params.append('email', formData.email);
+
+    // Champ personnalisé pour les peines
+    if (peinesTexte) params.append('designation', `Pronostic: ${peinesTexte}`);
+
+    const url = `${baseUrl}?${params.toString()}`;
     window.open(url, "_blank");
   };
 
