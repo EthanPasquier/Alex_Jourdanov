@@ -27,12 +27,12 @@ export function MentionsLegales() {
               ni un tirage au sort commercial.
             </p>
             <p>
-              Il s'agit d'une initiative satirique de soutien à la défense juridique d'Alex Jordanov, 
+              Il s'agit d'une initiative satirique de soutien à la défense juridique d'Alex Jordanov , 
               journaliste d'investigation poursuivi en justice.
             </p>
             <p>
               <strong>Utilisation des fonds :</strong> L'intégralité des sommes récoltées est destinée 
-              exclusivement au financement de la défense juridique d'Alex Jordanov. Aucun profit commercial 
+              exclusivement au financement de la défense juridique d'Alex Jordanov . Aucun profit commercial 
               n'est réalisé par les organisateurs.
             </p>
           </div>

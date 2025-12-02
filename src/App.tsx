@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/comment-jouer" element={<HowToPlay />} />
         <Route path="/affaire" element={<Case />} />
-        <Route path="/alex-jordanov" element={<Biography />} />
+        <Route path="/alex-jordanov " element={<Biography />} />
         <Route path="/participer" element={<LotoPrison />} />
         <Route path="/prix" element={<Prize />} />
         <Route path="/loto-prison" element={<LotoPrison />} />

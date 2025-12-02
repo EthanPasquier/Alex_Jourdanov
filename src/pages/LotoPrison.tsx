@@ -61,7 +61,7 @@ export default function LotoPrison() {
       .filter(Boolean)
       .join(", ");
 
-    let url = "https://donorbox.org/soutien-a-alex-jordanov-proces?";
+    let url = "https://donorbox.org/soutien-a-alex-jordanov -proces?";
     url += `amount=${encodeURIComponent(formData.montant)}`;
     if (formData.prenom) url += `&first_name=${encodeURIComponent(formData.prenom)}`;
     if (formData.nom) url += `&last_name=${encodeURIComponent(formData.nom)}`;
@@ -81,7 +81,7 @@ export default function LotoPrison() {
             LOTO PRISON
           </h1>
           <p className="text-xl md:text-2xl text-game-text mb-6">
-            Misez sur la peine d'Alex jordanov
+            Misez sur la peine d'Alex jordanov 
           </p>
           <p className="text-game-text-muted max-w-2xl mx-auto leading-relaxed">
             Un concept humoristique pour soutenir un combat sérieux. Choisissez les peines absurdes
@@ -125,7 +125,7 @@ export default function LotoPrison() {
             Pourquoi Alex est-il poursuivi ?
           </h2>
           <p className="text-game-text-muted mb-4">
-            Alex jordanov est mis en examen pour avoir révélé des informations d'intérêt public.
+            Alex jordanov  est mis en examen pour avoir révélé des informations d'intérêt public.
             Il encourt jusqu'à <strong className="text-game-gold">7 ans de prison</strong>.
           </p>
           <div className="space-y-2">
@@ -277,7 +277,7 @@ export default function LotoPrison() {
           <p className="text-sm text-game-text-muted leading-relaxed">
             ⚖️ Le Loto Prison est une initiative humoristique de soutien. Les peines listées sont un
             mélange de sanctions juridiques réelles et de suggestions complètement farfelues.
-            L'intégralité des dons est utilisée pour la défense juridique d'Alex jordanov.
+            L'intégralité des dons est utilisée pour la défense juridique d'Alex jordanov .
           </p>
           <p className="text-xs text-game-text-dim mt-3 font-medium uppercase tracking-wider">
             Un jeu de la Française des Vieux™

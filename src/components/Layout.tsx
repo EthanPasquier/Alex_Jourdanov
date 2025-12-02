@@ -50,12 +50,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
               L'affaire
             </Link>
             <Link
-              to="/alex-jordanov"
+              to="/alex-jordanov "
               className={`hover:text-game-gold transition-colors font-medium ${
-                location.pathname === "/alex-jordanov" ? "text-game-gold" : "text-game-text"
+                location.pathname === "/alex-jordanov " ? "text-game-gold" : "text-game-text"
               }`}
             >
-              Alex Jordanov
+              Alex Jordanov 
             </Link>
           </div>
         </nav>

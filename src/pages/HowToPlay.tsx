@@ -14,13 +14,13 @@ export function HowToPlay() {
           En échange, vous remplissez votre bulletin de pronostic :
         </p>
         <p className="text-xl font-bold mb-4 text-game-gold-light italic">
-          Quelle sera la peine finale infligée à Alex Jordanov ?
+          Quelle sera la peine finale infligée à Alex Jordanov  ?
         </p>
       </div>
 
       {/* Présentation de l'affaire */}
       <div className="bg-game-card rounded-xl p-8 mb-16 border border-game-red-light border-2">
-        <h2 className="text-2xl font-bold mb-6 text-center text-game-red-light">L'Affaire Alex Jordanov</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-game-red-light">L'Affaire Alex Jordanov </h2>
 
         <div className="grid gap-6">
           <div className="bg-game-bg-light rounded-lg p-6 border border-game-border">
@@ -78,7 +78,7 @@ export function HowToPlay() {
         </div>
 
         <div className="bg-game-card p-8 rounded-lg border border-game-border">
-          <h2 className="text-2xl font-bold text-game-gold mb-6">Le Prix Loto Prison 2025</h2>
+          <h2 className="text-2xl font-bold text-game-gold mb-6">Le Prix Loto Prison</h2>
           <p className="text-game-text mb-4">
             Celui ou celle qui aura deviné la peine exacte remportera :
           </p>

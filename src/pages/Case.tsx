@@ -10,7 +10,7 @@ export function Case() {
 
       <div className="text-game-text mb-16">
         <p className="mb-6 text-lg">
-          Alex Jordanov, l'un des journalistes d'investigation les plus respectés de sa génération, passe en procès. 
+          Alex Jordanov , l'un des journalistes d'investigation les plus respectés de sa génération, passe en procès. 
           Son crime ? Avoir fait son métier. Avoir enquêté. Avoir publié Les guerres de l'ombre de la DGSI, un livre 
           rigoureux et documenté sur les coulisses du renseignement intérieur. Autrement dit : avoir informé.
         </p>
@@ -41,9 +41,9 @@ export function Case() {
       {/* Key Points */}
       <div className="grid gap-8 mb-16">
         <div className="bg-game-card p-8 rounded-lg border border-game-border">
-          <h2 className="text-2xl font-bold text-game-gold mb-6">Qui est Alex Jordanov ?</h2>
+          <h2 className="text-2xl font-bold text-game-gold mb-6">Qui est Alex Jordanov  ?</h2>
           <p className="text-game-text mb-4">
-            Franco-americano d'origine bulgare, ancien grand reporter, Alex Jordanov enquête depuis plus de trente ans sur les zones grises : 
+            Franco-americano d'origine bulgare, ancien grand reporter, Alex Jordanov  enquête depuis plus de trente ans sur les zones grises : 
             services de renseignement, conflits armés, milieux clandestins.
             Specialiste de politique internationale, il connait par coeur le congrès americain.
           </p>
@@ -83,10 +83,10 @@ export function Case() {
 
       <div className="text-center">
         <Link 
-          to="/alex-jordanov"
+          to="/alex-jordanov "
           className="game-button border-2 border-game-gold text-game-gold px-8 py-3 rounded-lg font-bold hover:bg-game-gold hover:text-game-bg transition-all inline-block"
         >
-          En savoir plus sur Alex Jordanov
+          En savoir plus sur Alex Jordanov 
         </Link>
       </div>
     </div>

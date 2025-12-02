@@ -46,7 +46,7 @@ export function Home() {
           {/* Description */}
           <div className="glass-card rounded-3xl p-8 md:p-10 mb-10 max-w-3xl mx-auto slide-up">
             <p className="text-lg md:text-xl text-game-text-muted leading-relaxed mb-4">
-              Alex jordanov, journaliste d'investigation, passe en procès. Son crime ?
+              Alex jordanov , journaliste d'investigation, passe en procès. Son crime ?
               <strong className="text-game-gold"> Avoir fait son métier.</strong>
             </p>
             <p className="text-lg md:text-xl text-game-text-muted leading-relaxed mb-4">
@@ -152,7 +152,7 @@ export function Home() {
             <h3 className="text-xl font-bold text-game-gold mb-3">Soutenez Alex</h3>
             <p className="text-game-text-muted leading-relaxed">
               Faites un don du montant de votre choix. 100% des fonds vont à la
-              défense juridique d'Alex jordanov.
+              défense juridique d'Alex jordanov .
             </p>
           </div>
 
@@ -184,7 +184,7 @@ export function Home() {
               <div className="glass-card rounded-2xl p-4 glass-card-hover">
                 <img
                   src="/unnamed.png"
-                  alt="Alex jordanov"
+                  alt="Alex jordanov "
                   className="w-full h-auto rounded-xl object-cover"
                 />
               </div>
@@ -193,7 +193,7 @@ export function Home() {
             {/* Texte */}
             <div className="space-y-6 text-game-text-muted order-1 md:order-2">
               <p className="text-lg leading-relaxed">
-                <strong className="text-game-text">Alex jordanov</strong> est un journaliste d'investigation
+                <strong className="text-game-text">Alex jordanov </strong> est un journaliste d'investigation
                 poursuivi pour avoir révélé des informations d'intérêt public.
               </p>
 
