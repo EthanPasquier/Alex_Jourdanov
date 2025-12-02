@@ -3,7 +3,7 @@ import React from 'react';
 export function Biography() {
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-6 sm:mb-8 text-center text-game-gold">Alex Jordanov </h1>
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-6 sm:mb-8 text-center text-game-gold">Alex Jordanov</h1>
       <p className="text-base sm:text-lg md:text-xl text-center text-game-text-muted mb-8 sm:mb-12 font-medium">
         Journaliste d'investigation, réalisateur, auteur.
       </p>
@@ -12,7 +12,7 @@ export function Biography() {
       <div className="bg-game-card p-4 sm:p-6 md:p-8 rounded-lg mb-12 sm:mb-16 border border-game-border">
         <div className="text-game-text space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
           <p>
-            <strong>Né à Sofia (Bulgarie) en 1963</strong>, Alex Jordanov  incarne depuis plus de 30 ans une figure libre et engagée du journalisme français. Arrivé en France dans sa jeunesse, il suit un parcours d'excellence (Math Sup, Math Spé, puis UCLA à Los Angeles), avant de bifurquer vers l'image et l'investigation.
+            <strong>Né à Sofia (Bulgarie) en 1963</strong>, Alex Jordanov incarne depuis plus de 30 ans une figure libre et engagée du journalisme français. Arrivé en France dans sa jeunesse, il suit un parcours d'excellence (Math Sup, Math Spé, puis UCLA à Los Angeles), avant de bifurquer vers l'image et l'investigation.
           </p>
           <p>
             Il est l'un des moteurs de la culture rap aux côtés d'Ice-T et participe à l'émergence du hip-hop  de la côte ouest américaine.
@@ -149,7 +149,7 @@ export function Biography() {
         <div className="bg-game-bg-light rounded-lg p-6 border border-game-red-light border-2">
           <div className="text-game-text space-y-4 text-center">
             <p className="text-lg">
-              Alex Jordanov  n'a jamais revendiqué l'immunité. Mais il revendique le <strong>droit d'informer</strong>, le <strong>devoir de vérité</strong>, et l'<strong>indépendance du métier de journaliste</strong>.
+              Alex Jordanov n'a jamais revendiqué l'immunité. Mais il revendique le <strong>droit d'informer</strong>, le <strong>devoir de vérité</strong>, et l'<strong>indépendance du métier de journaliste</strong>.
             </p>
             <p className="text-xl font-bold text-game-red-light">
               Son procès est celui d'un homme… mais il pose une question à toute la société :
@@ -167,7 +167,7 @@ export function Biography() {
         <div className="grid gap-6">
           <blockquote className="border-l-4 border-game-gold pl-4">
             <p className="italic text-game-text mb-2">
-              "Alex Jordanov  incarne le journalisme d'investigation à la française : rigoureux, courageux et indépendant."
+              "Alex Jordanov incarne le journalisme d'investigation à la française : rigoureux, courageux et indépendant."
             </p>
             <footer className="text-sm text-game-text-muted">
               - Collectif de soutien aux journalistes

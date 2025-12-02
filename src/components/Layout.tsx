@@ -23,7 +23,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <img
               src="/nouveaulogo.png"
               alt="Loto Prison"
-              className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain"
+              className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain"
             />
           </Link>
 
@@ -54,9 +54,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
               L'affaire
             </Link>
             <Link
-              to="/alex-jordanov "
+              to="/alex-jordanov"
               className={`hover:text-game-gold transition-colors font-medium ${
-                location.pathname === "/alex-jordanov " ? "text-game-gold" : "text-game-text"
+                location.pathname === "/alex-jordanov" ? "text-game-gold" : "text-game-text"
               }`}
             >
               Alex Jordanov
@@ -65,7 +65,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Bouton hamburger - visible sur mobile uniquement */}
           <button
-            onClick={() => setIsMobileMenuOpen(true)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsMobileMenuOpen(true);
+            }}
             className="md:hidden w-11 h-11 flex flex-col items-center justify-center gap-1.5 rounded-lg hover:bg-game-gold/10 transition-colors"
             aria-label="Ouvrir le menu"
             aria-expanded={isMobileMenuOpen}

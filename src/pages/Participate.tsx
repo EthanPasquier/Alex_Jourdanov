@@ -13,7 +13,7 @@ export function Participate() {
     e.preventDefault();
 
     // Construction de l'URL Donorbox avec les paramètres
-    let url = "https://donorbox.org/soutien-a-alex-jordanov -proces?";
+    let url = "https://donorbox.org/soutien-a-alex-jordanov-proces?";
     url += `amount=${encodeURIComponent(formData.amount)}`;
     if (formData.firstName) url += `&first_name=${encodeURIComponent(formData.firstName)}`;
     if (formData.lastName) url += `&last_name=${encodeURIComponent(formData.lastName)}`;
@@ -116,7 +116,7 @@ export function Participate() {
 
         <div className="bg-game-bg-light p-4 rounded-lg mb-8 border border-game-border">
           <p className="text-sm text-game-text-muted">
-            ⚠️ En participant, vous acceptez que votre don soit utilisé pour la défense d'Alex Jordanov .
+            ⚠️ En participant, vous acceptez que votre don soit utilisé pour la défense d'Alex Jordanov.
             Les données personnelles ne seront utilisées que pour vous contacter en cas de victoire.
           </p>
         </div>

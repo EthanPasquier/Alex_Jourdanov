@@ -114,7 +114,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           <Link
             to="/alex-jordanov"
             className={`py-4 px-4 rounded-lg font-medium transition-colors ${
-              location.pathname === "/alex-jordanov" || location.pathname === "/alex-jordanov "
+              location.pathname === "/alex-jordanov"
                 ? "text-game-gold bg-game-gold/10"
                 : "text-game-text hover:text-game-gold hover:bg-game-gold/5"
             }`}

@@ -46,7 +46,7 @@ export function Home() {
           {/* Description */}
           <div className="glass-card rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 mb-8 sm:mb-10 max-w-3xl mx-auto slide-up">
             <p className="text-base sm:text-lg md:text-xl text-game-text-muted leading-relaxed mb-3 sm:mb-4">
-              Alex jordanov , journaliste d'investigation, passe en procès. Son crime ?
+              Alex Jordanov, journaliste d'investigation, passe en procès. Son crime ?
               <strong className="text-game-gold"> Avoir fait son métier.</strong>
             </p>
             <p className="text-base sm:text-lg md:text-xl text-game-text-muted leading-relaxed mb-3 sm:mb-4">
@@ -152,7 +152,7 @@ export function Home() {
             <h3 className="text-lg sm:text-xl font-bold text-game-gold mb-2 sm:mb-3">Soutenez Alex</h3>
             <p className="text-sm sm:text-base text-game-text-muted leading-relaxed">
               Faites un don du montant de votre choix. 100% des fonds vont à la
-              défense juridique d'Alex jordanov .
+              défense juridique d'Alex Jordanov.
             </p>
           </div>
 
@@ -184,7 +184,7 @@ export function Home() {
               <div className="glass-card rounded-2xl p-2 sm:p-3 md:p-4 glass-card-hover">
                 <img
                   src="/unnamed.png"
-                  alt="Alex jordanov "
+                  alt="Alex Jordanov"
                   className="w-full h-auto rounded-xl object-cover max-h-64 sm:max-h-80 md:max-h-none"
                 />
               </div>
@@ -193,7 +193,7 @@ export function Home() {
             {/* Texte */}
             <div className="space-y-4 sm:space-y-6 text-game-text-muted order-1 md:order-2">
               <p className="text-base sm:text-lg leading-relaxed">
-                <strong className="text-game-text">Alex jordanov </strong> est un journaliste d'investigation
+                <strong className="text-game-text">Alex Jordanov</strong> est un journaliste d'investigation
                 poursuivi pour avoir révélé des informations d'intérêt public.
               </p>
 
