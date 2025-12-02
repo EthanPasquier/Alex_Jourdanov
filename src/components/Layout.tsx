@@ -23,7 +23,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <img
               src="/nouveaulogo.png"
               alt="Loto Prison"
-              className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain"
+              className="h-20 sm:h-28 md:h-36 lg:h-44 xl:h-52 w-auto object-contain"
             />
           </Link>
 

@@ -39,21 +39,21 @@ export function Home() {
           </h1>
 
           {/* Sous-titre */}
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 text-game-text font-medium slide-up">
-            Un jeu absurde pour un procès politique.
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-6 sm:mb-8 text-game-text font-medium slide-up">
+            Un jeu absurde pour un procès politique
           </p>
 
           {/* Description */}
           <div className="glass-card rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 mb-8 sm:mb-10 max-w-3xl mx-auto slide-up">
-            <p className="text-base sm:text-lg md:text-xl text-game-text-muted leading-relaxed mb-3 sm:mb-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-game-text-muted leading-relaxed mb-4 sm:mb-6">
               Alex Jordanov, journaliste d'investigation, passe en procès. Son crime ?
               <strong className="text-game-gold"> Avoir fait son métier.</strong>
             </p>
-            <p className="text-base sm:text-lg md:text-xl text-game-text-muted leading-relaxed mb-3 sm:mb-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-game-text-muted leading-relaxed mb-4 sm:mb-6">
               Puisque la justice semble vouloir faire un exemple sans base solide,
               nous avons décidé de répondre par le hasard.
             </p>
-            <p className="text-lg sm:text-xl md:text-2xl text-game-gold italic font-semibold">
+            <p className="text-xl sm:text-2xl md:text-3xl text-game-gold italic font-semibold leading-relaxed">
               Ce n'est plus un verdict judiciaire. C'est une roulette politique.
               Alors autant en faire un jeu.
             </p>
@@ -135,33 +135,33 @@ export function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
 
           <div className="glass-card glass-card-hover rounded-3xl p-6 sm:p-8 text-center">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 glass-card rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 text-2xl sm:text-3xl">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 glass-card rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 text-3xl sm:text-4xl">
               🎯
             </div>
-            <h3 className="text-lg sm:text-xl font-bold text-game-gold mb-2 sm:mb-3">Choisissez vos peines</h3>
-            <p className="text-sm sm:text-base text-game-text-muted leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-bold text-game-gold mb-3 sm:mb-4">Choisissez vos peines</h3>
+            <p className="text-base sm:text-lg text-game-text-muted leading-relaxed">
               Sélectionnez parmi 23 peines, du sérieux à l'absurde, pour prédire
               ce que la justice pourrait décider.
             </p>
           </div>
 
           <div className="glass-card glass-card-hover rounded-3xl p-6 sm:p-8 text-center">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 glass-card rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 text-2xl sm:text-3xl">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 glass-card rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 text-3xl sm:text-4xl">
               💰
             </div>
-            <h3 className="text-lg sm:text-xl font-bold text-game-gold mb-2 sm:mb-3">Soutenez Alex</h3>
-            <p className="text-sm sm:text-base text-game-text-muted leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-bold text-game-gold mb-3 sm:mb-4">Soutenez Alex</h3>
+            <p className="text-base sm:text-lg text-game-text-muted leading-relaxed">
               Faites un don du montant de votre choix. 100% des fonds vont à la
               défense juridique d'Alex Jordanov.
             </p>
           </div>
 
           <div className="glass-card glass-card-hover rounded-3xl p-6 sm:p-8 text-center">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 glass-card rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 text-2xl sm:text-3xl">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 glass-card rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 text-3xl sm:text-4xl">
               🏆
             </div>
-            <h3 className="text-lg sm:text-xl font-bold text-game-gold mb-2 sm:mb-3">Gagnez un prix</h3>
-            <p className="text-sm sm:text-base text-game-text-muted leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-bold text-game-gold mb-3 sm:mb-4">Gagnez un prix</h3>
+            <p className="text-base sm:text-lg text-game-text-muted leading-relaxed">
               Le participant le plus proche du verdict remporte le Prix Loto Prison
               et un dîner avec Alex.
             </p>
@@ -192,14 +192,14 @@ export function Home() {
 
             {/* Texte */}
             <div className="space-y-4 sm:space-y-6 text-game-text-muted order-1 md:order-2">
-              <p className="text-base sm:text-lg leading-relaxed">
+              <p className="text-lg sm:text-xl leading-relaxed">
                 <strong className="text-game-text">Alex Jordanov</strong> est un journaliste d'investigation
                 poursuivi pour avoir révélé des informations d'intérêt public.
               </p>
 
               <div className="glass-card rounded-2xl p-4 sm:p-6">
-                <p className="text-xs sm:text-sm font-semibold text-game-gold mb-2 sm:mb-3">Les accusations :</p>
-                <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
+                <p className="text-sm sm:text-base font-semibold text-game-gold mb-3 sm:mb-4">Les accusations :</p>
+                <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base">
                   <li className="flex items-start gap-2">
                     <span className="text-game-gold">•</span>
                     <span>Appropriation et divulgation de secret défense</span>
@@ -219,15 +219,15 @@ export function Home() {
                 </ul>
               </div>
 
-              <p className="text-base sm:text-lg leading-relaxed">
-                Il encourt jusqu'à <strong className="text-game-red-light text-lg sm:text-xl">7 ans de prison et 100 000 euros d'amende</strong>
+              <p className="text-lg sm:text-xl leading-relaxed">
+                Il encourt jusqu'à <strong className="text-game-red-light text-xl sm:text-2xl">7 ans de prison et 100 000 euros d'amende</strong>
                 pour avoir exercé son métier de journaliste.
               </p>
 
               <div className="pt-2 sm:pt-4">
                 <Link
                   to="/affaire"
-                  className="inline-flex items-center gap-2 text-sm sm:text-base text-game-gold hover:text-game-gold-light transition-colors font-semibold"
+                  className="inline-flex items-center gap-2 text-base sm:text-lg text-game-gold hover:text-game-gold-light transition-colors font-semibold"
                 >
                   En savoir plus sur l'affaire
                   <span>→</span>
@@ -246,7 +246,7 @@ export function Home() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-game-gold mb-4 sm:mb-6">
             Le Prix Loto Prison 2026
           </h2>
-          <p className="text-base sm:text-lg text-game-text-muted leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-game-text-muted leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto">
             Un trophée honteux remis dans la dignité, un dîner avec Alex (libre, espérons-le),
             et l'honneur d'avoir compris l'absurde mieux que quiconque.
           </p>
@@ -265,7 +265,7 @@ export function Home() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-game-gold mb-4 sm:mb-6">
             Prêt à participer ?
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-game-text-muted mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-game-text-muted mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
             Faites vos pronostics, soutenez la liberté de la presse, et participez à ce combat absurde contre l'arbitraire.
           </p>
           <Link
