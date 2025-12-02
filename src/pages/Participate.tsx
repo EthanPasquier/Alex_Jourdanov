@@ -13,7 +13,7 @@ export function Participate() {
     e.preventDefault();
 
     // Construction de l'URL Donorbox avec les paramètres
-    let url = "https://donorbox.org/soutien-a-alex-jourdanov-proces?";
+    let url = "https://donorbox.org/soutien-a-alex-jordanov-proces?";
     url += `amount=${encodeURIComponent(formData.amount)}`;
     if (formData.firstName) url += `&first_name=${encodeURIComponent(formData.firstName)}`;
     if (formData.lastName) url += `&last_name=${encodeURIComponent(formData.lastName)}`;
@@ -96,7 +96,7 @@ export function Participate() {
               'Grosse tarte dans la gueule', 
               'Prison à vie', 
               'Stage chez Hanouna', 
-              'Déradicalisation obligatoire de journalistes'
+              'Déradicalisation obligatoire du journalisme'
             ].map((option) => (
               <label key={option} className="flex items-center gap-2">
                 <input

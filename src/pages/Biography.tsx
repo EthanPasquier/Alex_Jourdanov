@@ -15,13 +15,13 @@ export function Biography() {
             <strong>Né à Sofia (Bulgarie) en 1963</strong>, Alex Jordanov incarne depuis plus de 30 ans une figure libre et engagée du journalisme français. Arrivé en France dans sa jeunesse, il suit un parcours d'excellence (Math Sup, Math Spé, puis UCLA à Los Angeles), avant de bifurquer vers l'image et l'investigation.
           </p>
           <p>
-            Il découvre la culture hip-hop aux côtés d'Ice-T et participe à l'émergence artistique de la côte ouest américaine.
+            Il est l'un des moteurs de la culture rap aux côtés d'Ice-T et participe à l'émergence du hip-hop  de la côte ouest américaine.
           </p>
           <p>
-            De retour en France, il se forge une réputation dans les zones grises de l'information : services secrets, conflits armés, réseaux d'influence. Il réalise de nombreux documentaires pour Canal+, France Télévisions, Arte, ou encore National Geographic, souvent sur des sujets sensibles, allant des guerres de l'ombre aux mafias internationales.
+            De retour en France, il se forge une réputation dans les zones grises de l'information : services secrets, conflits armés, réseaux d'influence. Il réalise de nombreux documentaires pour Canal+, France Télévisions, Arte, ou encore National Geographic, souvent sur des sujets sensibles, allant des guerres de l'ombre aux mafias et leurs raisonanance sur la politique internationale.
           </p>
           <p>
-            En 2019, il publie <em>Les guerres de l'ombre de la DGSI</em>, un livre-enquête documenté et percutant sur le fonctionnement des services de renseignement français. C'est ce travail journalistique, pourtant salué par la presse spécialisée, qui lui vaut aujourd'hui un procès.
+            En 2019, il publie <em>Les guerres de l'ombre de la DGSI</em>, un livre-enquête documenté et percutant sur le fonctionnement des services de renseignement français. C'est ce travail journalistique, pourtant salué par la presse dans son ensemble, qui lui vaut aujourd'hui un procès.
           </p>
         </div>
       </div>
@@ -37,17 +37,17 @@ export function Biography() {
           </div>
           <div>
             <div className="absolute w-4 h-4 bg-game-gold rounded-full -left-2"></div>
-            <h3 className="text-xl font-bold mb-2 text-game-text">Années 1980</h3>
+            <h3 className="text-xl font-bold mb-2 text-game-text">1970 - 1980</h3>
             <p className="text-game-text-muted">Arrivée en France, études supérieures (Math Sup, Math Spé)</p>
           </div>
           <div>
             <div className="absolute w-4 h-4 bg-game-gold rounded-full -left-2"></div>
             <h3 className="text-xl font-bold mb-2 text-game-text">UCLA - Los Angeles</h3>
-            <p className="text-game-text-muted">Études aux États-Unis, découverte de la culture hip-hop avec Ice-T</p>
+            <p className="text-game-text-muted">Maitrise de mathématiques aux États-Unis, aux origines de la culture hip-hop West Coast avec Ice-T et Dr. Dre</p>
           </div>
           <div>
             <div className="absolute w-4 h-4 bg-game-gold rounded-full -left-2"></div>
-            <h3 className="text-xl font-bold mb-2 text-game-text">1990-2020</h3>
+            <h3 className="text-xl font-bold mb-2 text-game-text">1995-2025</h3>
             <p className="text-game-text-muted">Carrière de journaliste d'investigation et réalisateur de documentaires</p>
           </div>
           <div>
@@ -57,7 +57,7 @@ export function Biography() {
           </div>
           <div>
             <div className="absolute w-4 h-4 bg-game-gold rounded-full -left-2"></div>
-            <h3 className="text-xl font-bold mb-2 text-game-text">2025</h3>
+            <h3 className="text-xl font-bold mb-2 text-game-text">2026</h3>
             <p className="text-game-text-muted text-game-red-light font-semibold">Procès pour son travail journalistique</p>
           </div>
         </div>
@@ -107,6 +107,7 @@ export function Biography() {
         <div className="bg-game-bg-light rounded-lg p-6 border border-game-border">
           <p className="text-game-text-muted text-center italic">
             "Un journaliste qui fait son métier ne devrait pas finir devant un tribunal."
+            il beneficie du droit de protection des sources et à le devoir d'informer.
           </p>
         </div>
       </div>
@@ -124,8 +125,10 @@ export function Biography() {
                 <footer className="text-sm text-game-text-muted mt-1">- Vice</footer>
               </blockquote>
               <blockquote className="text-game-text italic">
-                "Plus grand reporter français vivant"
+                "Le plus grand reporter français vivant"
                 <footer className="text-sm text-game-text-muted mt-1">- Vice</footer>
+                L'homme qui confessait les espions
+                <footer className="text-sm text-game-text-muted mt-1">- Le Point</footer>
               </blockquote>
             </div>
           </div>

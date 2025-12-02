@@ -35,7 +35,7 @@ export function HowToPlay() {
           <div className="bg-game-bg-light rounded-lg p-6 border border-game-border">
             <h3 className="text-lg font-bold text-game-red-light mb-4">Peines encourues</h3>
             <div className="text-game-text space-y-2">
-              <p className="text-xl font-bold">Jusqu'à <span className="text-game-red-light">10 ans de prison</span> et <span className="text-game-red-light">150 000 € d'amende</span></p>
+              <p className="text-xl font-bold">Jusqu'à <span className="text-game-red-light">7 ans de prison</span> et <span className="text-game-red-light">100 000 € d'amende</span></p>
               <p><strong>Circonstances aggravantes :</strong> les sources seraient issues de fonctionnaires soumis au secret</p>
             </div>
           </div>
@@ -84,7 +84,7 @@ export function HowToPlay() {
           </p>
           <ul className="text-game-text space-y-2 list-disc list-inside">
             <li>Un trophée honteux remis avec dignité</li>
-            <li>Un dîner avec Alex (libre, espérons-le)</li>
+            <li>Un dîner avec Alex (libre, espérons-le) et ses amis VIP et Rappeurs</li>
             <li>Et surtout, l'honneur d'avoir compris l'absurde mieux que quiconque</li>
           </ul>
         </div>

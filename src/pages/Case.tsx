@@ -29,7 +29,7 @@ export function Case() {
           <li>Révélation d'information permettant l'identification d'une source</li>
         </ul>
         <p className="text-game-text-muted mb-4">
-          Il encourt jusqu'à 10 ans de prison.
+          Il encourt jusqu'à 7 ans de prison.
         </p>
         <p className="text-game-text-muted">
           Les accusations s'appuient sur des rapprochements flous entre le contenu du livre, des témoignages,
@@ -43,12 +43,13 @@ export function Case() {
         <div className="bg-game-card p-8 rounded-lg border border-game-border">
           <h2 className="text-2xl font-bold text-game-gold mb-6">Qui est Alex Jordanov ?</h2>
           <p className="text-game-text mb-4">
-            Franco-bulgare, ancien grand reporter, Alex Jordanov enquête depuis plus de trente ans sur les zones grises : 
+            Franco-americano d'origine bulgare, ancien grand reporter, Alex Jordanov enquête depuis plus de trente ans sur les zones grises : 
             services de renseignement, conflits armés, milieux clandestins.
+            Specialiste de politique internationale, il connait par coeur le congrès americain.
           </p>
           <p className="text-game-text mb-4">
             Il a sillonné les terrains sensibles — Balkans, Moyen-Orient, Afrique de l'Ouest — et produit des documentaires 
-            diffusés sur les plus grandes chaînes européennes. Son travail, salué pour sa rigueur, repose sur une méthode 
+            diffusés sur les plus grandes chaînes americaines et européennes. Son travail, salué pour sa rigueur, repose sur une méthode 
             exigeante : croiser les sources, vérifier les faits, confronter les témoignages.
           </p>
           <p className="text-game-text">

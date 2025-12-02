@@ -4,13 +4,13 @@ const PEINES = [
   { label: "Travail d'intérêt général (TIG)", value: "tig" },
   { label: "Grosse tarte dans la gueule", value: "tarte_gueule" },
   { label: "Peine d'emprisonnement avec sursis", value: "prison_sursis" },
-  { label: "Prison ferme (- 10 ans)", value: "prison_ferme" },
+  { label: "Prison ferme (- 7 ans)", value: "prison_ferme" },
   { label: "Prison à vie", value: "prison_vie" },
   { label: "Interdiction d'exercer le journalisme (temporaires — 1 à 5 ans)", value: "interdiction_journalisme" },
   { label: "Fessée publique par Gérald D.", value: "fessee_gerald" },
   { label: "Saisie du matériel professionnel (stylos, dictaphones, disques durs)", value: "saisie_materiel" },
   { label: "Exil en Russie", value: "exil_russie" },
-  { label: "Déchéance de « nationalité bulgaro-parisienne »", value: "decheance_bulgaro" },
+  { label: "Déchéance de « nationalité Americano-bulgaro-parigot»", value: "decheance_bulgaro" },
   { label: "Bracelet électronique", value: "bracelet" },
   { label: "Rectificatif obligatoire dans Valeurs Actuelles", value: "rectificatif_va" },
   { label: "Stage chez Hanouna", value: "stage_hanouna" },
@@ -20,9 +20,12 @@ const PEINES = [
   { label: "Retrait d'accréditation / suspension de visa de presse", value: "retrait_accreditation" },
   { label: "Dommages et intérêts civils", value: "dommages_interets" },
   { label: "Rédaction d'un roman feel-good chez Albin Michel", value: "roman_feelgood" },
-  { label: "Retrait de passeport", value: "retrait_passeport" },
   { label: "Formation DGSI", value: "formation_dgsi" },
-  { label: "Déradicalisation obligatoire de journalistes", value: "deradicalisation" },
+  { label: "Déradicalisation obligatoire du journalisme", value: "deradicalisation" },
+  { label: "3 ans de sursis", value: "sur_3_ans" },
+  { label: "travaux d'intérêt général", value: "travaux_interet_general" },
+  { label: "controle judiciaire 10 ans", value: "controle_judiciaire" }
+
 ];
 
 const ACCUSATIONS = [
@@ -58,7 +61,7 @@ export default function LotoPrison() {
       .filter(Boolean)
       .join(", ");
 
-    let url = "https://donorbox.org/soutien-a-alex-jourdanov-proces?";
+    let url = "https://donorbox.org/soutien-a-alex-jordanov-proces?";
     url += `amount=${encodeURIComponent(formData.montant)}`;
     if (formData.prenom) url += `&first_name=${encodeURIComponent(formData.prenom)}`;
     if (formData.nom) url += `&last_name=${encodeURIComponent(formData.nom)}`;
@@ -78,7 +81,7 @@ export default function LotoPrison() {
             LOTO PRISON
           </h1>
           <p className="text-xl md:text-2xl text-game-text mb-6">
-            Misez sur la peine d'Alex Jourdanov
+            Misez sur la peine d'Alex jordanov
           </p>
           <p className="text-game-text-muted max-w-2xl mx-auto leading-relaxed">
             Un concept humoristique pour soutenir un combat sérieux. Choisissez les peines absurdes
@@ -122,8 +125,8 @@ export default function LotoPrison() {
             Pourquoi Alex est-il poursuivi ?
           </h2>
           <p className="text-game-text-muted mb-4">
-            Alex Jourdanov est mis en examen pour avoir révélé des informations d'intérêt public.
-            Il encourt jusqu'à <strong className="text-game-gold">10 ans de prison</strong>.
+            Alex jordanov est mis en examen pour avoir révélé des informations d'intérêt public.
+            Il encourt jusqu'à <strong className="text-game-gold">7 ans de prison</strong>.
           </p>
           <div className="space-y-2">
             <p className="text-sm font-semibold text-game-text mb-2">Chefs d'accusation :</p>
@@ -274,7 +277,7 @@ export default function LotoPrison() {
           <p className="text-sm text-game-text-muted leading-relaxed">
             ⚖️ Le Loto Prison est une initiative humoristique de soutien. Les peines listées sont un
             mélange de sanctions juridiques réelles et de suggestions complètement farfelues.
-            L'intégralité des dons est utilisée pour la défense juridique d'Alex Jourdanov.
+            L'intégralité des dons est utilisée pour la défense juridique d'Alex jordanov.
           </p>
           <p className="text-xs text-game-text-dim mt-3 font-medium uppercase tracking-wider">
             Un jeu de la Française des Vieux™
