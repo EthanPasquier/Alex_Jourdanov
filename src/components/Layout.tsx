@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { MobileMenu } from './MobileMenu';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
-  
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div
       className="min-h-screen text-game-text font-sans"
@@ -12,7 +14,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       }}
     >
       {/* Header */}
-      <header className="container mx-auto px-4 py-6">
+      <header className="container mx-auto px-3 py-3 sm:px-4 sm:py-4 md:px-4 md:py-6">
         <nav className="flex justify-between items-center">
           <Link
             to="/"
@@ -21,10 +23,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <img
               src="/nouveaulogo.png"
               alt="Loto Prison"
-              className="h-24 w-auto object-contain"
+              className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain"
             />
           </Link>
-          <div className="flex gap-6">
+
+          {/* Menu desktop - caché sur mobile */}
+          <div className="hidden md:flex gap-6">
             <Link
               to="/loto-prison"
               className={`hover:text-game-gold transition-colors font-medium ${
@@ -55,11 +59,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 location.pathname === "/alex-jordanov " ? "text-game-gold" : "text-game-text"
               }`}
             >
-              Alex Jordanov 
+              Alex Jordanov
             </Link>
           </div>
+
+          {/* Bouton hamburger - visible sur mobile uniquement */}
+          <button
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="md:hidden w-11 h-11 flex flex-col items-center justify-center gap-1.5 rounded-lg hover:bg-game-gold/10 transition-colors"
+            aria-label="Ouvrir le menu"
+            aria-expanded={isMobileMenuOpen}
+          >
+            <span className="w-6 h-0.5 bg-game-gold rounded-full"></span>
+            <span className="w-6 h-0.5 bg-game-gold rounded-full"></span>
+            <span className="w-6 h-0.5 bg-game-gold rounded-full"></span>
+          </button>
         </nav>
       </header>
+
+      {/* Menu mobile */}
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
@@ -68,11 +87,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Footer */}
       <footer className="container mx-auto px-4 py-8 mt-16 border-t border-game-border">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
           <div className="text-sm text-game-text-muted text-center md:text-left">
-            © 2025 Loto Prison - Une initiative satirique pour la liberté de la presse
+            © 2026 Loto Prison - Une initiative satirique pour la liberté de la presse
           </div>
-          <div className="flex gap-4 text-sm">
+          <div className="flex gap-3 sm:gap-4 text-sm">
             <Link
               to="/mentions-legales"
               className="text-game-text-dim hover:text-game-gold transition-colors"

@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 export function Prize() {
   return (
     <div className="max-w-4xl mx-auto text-center">
-      <div className="mb-12">
-        <h1 className="text-4xl font-display font-bold mb-4 text-game-gold">Prix Loto Prison 2025</h1>
-        <p className="text-xl text-game-text-muted">
+      <div className="mb-8 sm:mb-12">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-3 sm:mb-4 text-game-gold">Prix Loto Prison 2026</h1>
+        <p className="text-base sm:text-lg md:text-xl text-game-text-muted">
           Devinez la peine exacte et remportez le prix de l'absurde
         </p>
       </div>
 
-      <div className="bg-game-card p-8 rounded-lg mb-16 max-w-2xl mx-auto border border-game-border">
+      <div className="bg-game-card p-6 sm:p-8 rounded-lg mb-12 sm:mb-16 max-w-2xl mx-auto border border-game-border">
         <h2 className="text-2xl font-bold mb-6 text-game-gold">Le gagnant remportera :</h2>
         <div className="grid gap-6">
           <div className="flex items-center gap-4">
@@ -24,7 +24,7 @@ export function Prize() {
           <div className="flex items-center gap-4">
             <div className="text-left">
               <h3 className="font-bold mb-1 text-game-text">Un dîner avec Alex</h3>
-              <p className="text-game-text-muted">Une soirée unique avec le journaliste (libre, espérons-le)</p>
+              <p className="text-game-text-muted">Une soirée unique avec le journaliste (libre, espérons-le) et ses amis VIP et Rappeurs</p>
             </div>
           </div>
 

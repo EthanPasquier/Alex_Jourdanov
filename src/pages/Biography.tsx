@@ -3,14 +3,14 @@ import React from 'react';
 export function Biography() {
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-4xl font-display font-bold mb-8 text-center text-game-gold">Alex Jordanov </h1>
-      <p className="text-xl text-center text-game-text-muted mb-12 font-medium">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-6 sm:mb-8 text-center text-game-gold">Alex Jordanov </h1>
+      <p className="text-base sm:text-lg md:text-xl text-center text-game-text-muted mb-8 sm:mb-12 font-medium">
         Journaliste d'investigation, réalisateur, auteur.
       </p>
 
       {/* Bio principale */}
-      <div className="bg-game-card p-8 rounded-lg mb-16 border border-game-border">
-        <div className="text-game-text space-y-6 text-lg leading-relaxed">
+      <div className="bg-game-card p-4 sm:p-6 md:p-8 rounded-lg mb-12 sm:mb-16 border border-game-border">
+        <div className="text-game-text space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
           <p>
             <strong>Né à Sofia (Bulgarie) en 1963</strong>, Alex Jordanov  incarne depuis plus de 30 ans une figure libre et engagée du journalisme français. Arrivé en France dans sa jeunesse, il suit un parcours d'excellence (Math Sup, Math Spé, puis UCLA à Los Angeles), avant de bifurquer vers l'image et l'investigation.
           </p>
@@ -27,74 +27,74 @@ export function Biography() {
       </div>
 
       {/* Parcours chronologique */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-bold mb-6 text-game-gold">Parcours</h2>
-        <div className="relative border-l-2 border-game-gold pl-8 space-y-12 ml-4">
+      <div className="mb-12 sm:mb-16">
+        <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-game-gold">Parcours</h2>
+        <div className="relative border-l-2 border-game-gold pl-6 md:pl-8 space-y-6 md:space-y-8 ml-2 md:ml-4">
           <div>
-            <div className="absolute w-4 h-4 bg-game-gold rounded-full -left-2"></div>
-            <h3 className="text-xl font-bold mb-2 text-game-text">1963</h3>
-            <p className="text-game-text-muted">Naissance à Sofia, Bulgarie</p>
+            <div className="absolute w-3 h-3 md:w-4 md:h-4 bg-game-gold rounded-full -left-[7px] md:-left-2"></div>
+            <h3 className="text-lg md:text-xl font-bold mb-1 sm:mb-2 text-game-text">1963</h3>
+            <p className="text-sm md:text-base text-game-text-muted">Naissance à Sofia, Bulgarie</p>
           </div>
           <div>
-            <div className="absolute w-4 h-4 bg-game-gold rounded-full -left-2"></div>
-            <h3 className="text-xl font-bold mb-2 text-game-text">1970 - 1980</h3>
-            <p className="text-game-text-muted">Arrivée en France, études supérieures (Math Sup, Math Spé)</p>
+            <div className="absolute w-3 h-3 md:w-4 md:h-4 bg-game-gold rounded-full -left-[7px] md:-left-2"></div>
+            <h3 className="text-lg md:text-xl font-bold mb-1 sm:mb-2 text-game-text">1970 - 1980</h3>
+            <p className="text-sm md:text-base text-game-text-muted">Arrivée en France, études supérieures (Math Sup, Math Spé)</p>
           </div>
           <div>
-            <div className="absolute w-4 h-4 bg-game-gold rounded-full -left-2"></div>
-            <h3 className="text-xl font-bold mb-2 text-game-text">UCLA - Los Angeles</h3>
-            <p className="text-game-text-muted">Maitrise de mathématiques aux États-Unis, aux origines de la culture hip-hop West Coast avec Ice-T et Dr. Dre</p>
+            <div className="absolute w-3 h-3 md:w-4 md:h-4 bg-game-gold rounded-full -left-[7px] md:-left-2"></div>
+            <h3 className="text-lg md:text-xl font-bold mb-1 sm:mb-2 text-game-text">UCLA - Los Angeles</h3>
+            <p className="text-sm md:text-base text-game-text-muted">Maitrise de mathématiques aux États-Unis, aux origines de la culture hip-hop West Coast avec Ice-T et Dr. Dre</p>
           </div>
           <div>
-            <div className="absolute w-4 h-4 bg-game-gold rounded-full -left-2"></div>
-            <h3 className="text-xl font-bold mb-2 text-game-text">1995-2025</h3>
-            <p className="text-game-text-muted">Carrière de journaliste d'investigation et réalisateur de documentaires</p>
+            <div className="absolute w-3 h-3 md:w-4 md:h-4 bg-game-gold rounded-full -left-[7px] md:-left-2"></div>
+            <h3 className="text-lg md:text-xl font-bold mb-1 sm:mb-2 text-game-text">1995-2025</h3>
+            <p className="text-sm md:text-base text-game-text-muted">Carrière de journaliste d'investigation et réalisateur de documentaires</p>
           </div>
           <div>
-            <div className="absolute w-4 h-4 bg-game-gold rounded-full -left-2"></div>
-            <h3 className="text-xl font-bold mb-2 text-game-text">2019</h3>
-            <p className="text-game-text-muted">Publication de "Les guerres de l'ombre de la DGSI"</p>
+            <div className="absolute w-3 h-3 md:w-4 md:h-4 bg-game-gold rounded-full -left-[7px] md:-left-2"></div>
+            <h3 className="text-lg md:text-xl font-bold mb-1 sm:mb-2 text-game-text">2019</h3>
+            <p className="text-sm md:text-base text-game-text-muted">Publication de "Les guerres de l'ombre de la DGSI"</p>
           </div>
           <div>
-            <div className="absolute w-4 h-4 bg-game-gold rounded-full -left-2"></div>
-            <h3 className="text-xl font-bold mb-2 text-game-text">2026</h3>
-            <p className="text-game-text-muted text-game-red-light font-semibold">Procès pour son travail journalistique</p>
+            <div className="absolute w-3 h-3 md:w-4 md:h-4 bg-game-gold rounded-full -left-[7px] md:-left-2"></div>
+            <h3 className="text-lg md:text-xl font-bold mb-1 sm:mb-2 text-game-text">2026</h3>
+            <p className="text-sm md:text-base text-game-text-muted text-game-red-light font-semibold">Procès pour son travail journalistique</p>
           </div>
         </div>
       </div>
 
       {/* Domaines d'expertise */}
-      <div className="grid gap-8 mb-16">
-        <h2 className="text-2xl font-bold text-game-gold">Domaines d'expertise</h2>
-        
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-game-card p-6 rounded-lg border border-game-border">
-            <h3 className="font-bold mb-2 text-game-text">Services secrets</h3>
-            <p className="text-game-text-muted">Investigation sur les services de renseignement français et internationaux</p>
+      <div className="grid gap-6 sm:gap-8 mb-12 sm:mb-16">
+        <h2 className="text-xl sm:text-2xl font-bold text-game-gold">Domaines d'expertise</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <div className="bg-game-card p-4 sm:p-6 rounded-lg border border-game-border">
+            <h3 className="font-bold mb-1 sm:mb-2 text-game-text text-sm sm:text-base">Services secrets</h3>
+            <p className="text-game-text-muted text-xs sm:text-sm">Investigation sur les services de renseignement français et internationaux</p>
           </div>
 
-          <div className="bg-game-card p-6 rounded-lg border border-game-border">
-            <h3 className="font-bold mb-2 text-game-text">Conflits armés</h3>
-            <p className="text-game-text-muted">Couverture des zones de guerre et conflits internationaux</p>
+          <div className="bg-game-card p-4 sm:p-6 rounded-lg border border-game-border">
+            <h3 className="font-bold mb-1 sm:mb-2 text-game-text text-sm sm:text-base">Conflits armés</h3>
+            <p className="text-game-text-muted text-xs sm:text-sm">Couverture des zones de guerre et conflits internationaux</p>
           </div>
 
-          <div className="bg-game-card p-6 rounded-lg border border-game-border">
-            <h3 className="font-bold mb-2 text-game-text">Réseaux d'influence</h3>
-            <p className="text-game-text-muted">Enquêtes sur les mafias internationales et réseaux de pouvoir</p>
+          <div className="bg-game-card p-4 sm:p-6 rounded-lg border border-game-border">
+            <h3 className="font-bold mb-1 sm:mb-2 text-game-text text-sm sm:text-base">Réseaux d'influence</h3>
+            <p className="text-game-text-muted text-xs sm:text-sm">Enquêtes sur les mafias internationales et réseaux de pouvoir</p>
           </div>
 
-          <div className="bg-game-card p-6 rounded-lg border border-game-border">
-            <h3 className="font-bold mb-2 text-game-text">Documentaires</h3>
-            <p className="text-game-text-muted">Réalisations pour Canal+, France TV, Arte, National Geographic</p>
+          <div className="bg-game-card p-4 sm:p-6 rounded-lg border border-game-border">
+            <h3 className="font-bold mb-1 sm:mb-2 text-game-text text-sm sm:text-base">Documentaires</h3>
+            <p className="text-game-text-muted text-xs sm:text-sm">Réalisations pour Canal+, France TV, Arte, National Geographic</p>
           </div>
         </div>
       </div>
 
       {/* Œuvre phare */}
-      <div className="bg-game-card rounded-xl p-8 mb-16 border border-game-border">
-        <h2 className="text-2xl font-bold mb-6 text-center text-game-gold">L'œuvre qui dérange</h2>
-        <div className="text-center mb-6">
-          <h3 className="text-2xl font-semibold text-game-text mb-4">
+      <div className="bg-game-card rounded-xl p-6 sm:p-8 mb-12 sm:mb-16 border border-game-border">
+        <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center text-game-gold">L'œuvre qui dérange</h2>
+        <div className="text-center mb-4 sm:mb-6">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-game-text mb-3 sm:mb-4">
             "Les guerres de l'ombre de la DGSI" (2019)
           </h3>
           <p className="text-lg text-game-text-muted mb-4">

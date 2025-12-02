@@ -4,23 +4,23 @@ import { Link } from 'react-router-dom';
 export function Case() {
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-4xl font-display font-bold mb-8 text-center text-game-gold">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-6 sm:mb-8 text-center text-game-gold">
         LOTO PRISON — Un jeu absurde pour un procès politique
       </h1>
 
-      <div className="text-game-text mb-16">
-        <p className="mb-6 text-lg">
-          Alex Jordanov , l'un des journalistes d'investigation les plus respectés de sa génération, passe en procès. 
-          Son crime ? Avoir fait son métier. Avoir enquêté. Avoir publié Les guerres de l'ombre de la DGSI, un livre 
+      <div className="text-game-text mb-12 sm:mb-16">
+        <p className="mb-4 sm:mb-6 text-base sm:text-lg">
+          Alex Jordanov , l'un des journalistes d'investigation les plus respectés de sa génération, passe en procès.
+          Son crime ? Avoir fait son métier. Avoir enquêté. Avoir publié Les guerres de l'ombre de la DGSI, un livre
           rigoureux et documenté sur les coulisses du renseignement intérieur. Autrement dit : avoir informé.
         </p>
-        <p className="mb-6 text-lg">
+        <p className="mb-4 sm:mb-6 text-base sm:text-lg">
           La justice française ne l'accuse pas d'avoir menti. Elle lui reproche d'avoir dit trop de choses.
         </p>
       </div>
 
       {/* Charges */}
-      <div className="bg-game-card p-8 rounded-lg mb-16 border border-game-border">
+      <div className="bg-game-card p-4 sm:p-6 md:p-8 rounded-lg mb-12 sm:mb-16 border border-game-border">
         <h2 className="text-2xl font-bold mb-6 text-game-red-light">Mis en examen des chefs de :</h2>
         <ul className="list-disc list-inside space-y-3 text-game-text mb-6">
           <li>Appropriation et divulgation de secret défense</li>

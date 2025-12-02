@@ -3,13 +3,13 @@ import React from 'react';
 export function MentionsLegales() {
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-4xl font-display font-bold mb-8 text-center text-game-gold">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-6 sm:mb-8 text-center text-game-gold">
         Mentions Légales
       </h1>
 
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {/* Éditeur du site */}
-        <div className="bg-game-card p-8 rounded-lg border border-game-border">
+        <div className="bg-game-card p-4 sm:p-6 md:p-8 rounded-lg border border-game-border">
           <h2 className="text-2xl font-bold mb-6 text-game-gold">Éditeur du site</h2>
           <div className="text-game-text space-y-3">
             <p><strong>Nom :</strong> Initiative Loto Prison</p>

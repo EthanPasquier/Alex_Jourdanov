@@ -4,22 +4,22 @@ import { Link } from 'react-router-dom';
 export function HowToPlay() {
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-4xl font-display font-bold mb-8 text-center text-game-gold">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-6 sm:mb-8 text-center text-game-gold">
         Comment participer ?
       </h1>
 
-      <div className="text-game-text mb-12">
-        <p className="text-xl mb-6">
-          Vous contribuez à la défense d'Alex (et donc à la liberté de la presse) avec le montant de votre choix (minimum suggéré : 10€). 
+      <div className="text-game-text mb-8 sm:mb-12">
+        <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-6">
+          Vous contribuez à la défense d'Alex (et donc à la liberté de la presse) avec le montant de votre choix (minimum suggéré : 10€).
           En échange, vous remplissez votre bulletin de pronostic :
         </p>
-        <p className="text-xl font-bold mb-4 text-game-gold-light italic">
+        <p className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-game-gold-light italic">
           Quelle sera la peine finale infligée à Alex Jordanov  ?
         </p>
       </div>
 
       {/* Présentation de l'affaire */}
-      <div className="bg-game-card rounded-xl p-8 mb-16 border border-game-red-light border-2">
+      <div className="bg-game-card rounded-xl p-6 sm:p-8 mb-12 sm:mb-16 border border-game-red-light border-2">
         <h2 className="text-2xl font-bold mb-6 text-center text-game-red-light">L'Affaire Alex Jordanov </h2>
 
         <div className="grid gap-6">
