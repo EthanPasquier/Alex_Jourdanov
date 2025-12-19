@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useCampaignStats } from '../hooks/useCampaignStats';
 
 export function Home() {
   const [daysUntilTrial, setDaysUntilTrial] = useState<number>(0);
+  const { stats, loading } = useCampaignStats();
 
   useEffect(() => {
     const calculateDaysUntilTrial = () => {
@@ -89,7 +91,9 @@ export function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
 
           <div className="glass-card glass-card-hover rounded-3xl p-6 sm:p-7 md:p-8 text-center">
-            <div className="text-4xl sm:text-5xl font-bold mb-3 text-game-gold">0</div>
+            <div className="text-4xl sm:text-5xl font-bold mb-3 text-game-gold">
+              {loading ? '...' : stats.donationsCount}
+            </div>
             <div className="text-game-text-muted font-medium uppercase tracking-wide text-sm">
               Participants
             </div>
@@ -99,7 +103,9 @@ export function Home() {
           </div>
 
           <div className="glass-card glass-card-hover rounded-3xl p-6 sm:p-7 md:p-8 text-center">
-            <div className="text-4xl sm:text-5xl font-bold mb-3 text-game-gold">0€</div>
+            <div className="text-4xl sm:text-5xl font-bold mb-3 text-game-gold">
+              {loading ? '...' : `${stats.totalRaised}€`}
+            </div>
             <div className="text-game-text-muted font-medium uppercase tracking-wide text-sm">
               Somme récoltée
             </div>
