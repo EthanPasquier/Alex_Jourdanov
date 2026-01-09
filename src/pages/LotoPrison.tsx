@@ -51,7 +51,7 @@ export default function LotoPrison() {
     );
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Construction de l'URL Donorbox avec les paramètres
@@ -59,6 +59,28 @@ export default function LotoPrison() {
       .map((peine) => PEINES.find((p) => p.value === peine)?.label)
       .filter(Boolean)
       .join(", ");
+
+    // Envoi des données au webhook
+    try {
+      await fetch('https://conservation-cheryl-maxtrack-6ebca059.koyeb.app/webhook/enrigstrer', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          montant: formData.montant,
+          prenom: formData.prenom,
+          nom: formData.nom,
+          email: formData.email,
+          peines: selectedPeines,
+          peinesTexte: peinesTexte,
+          timestamp: new Date().toISOString(),
+        }),
+      });
+    } catch (error) {
+      console.error('Erreur lors de l\'enregistrement du don:', error);
+      // On continue même en cas d'erreur pour ne pas bloquer l'utilisateur
+    }
 
     // URL de base Donorbox
     const baseUrl = "https://donorbox.org/soutien-a-alex-jordanov-proces";

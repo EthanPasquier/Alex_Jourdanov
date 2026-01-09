@@ -9,8 +9,29 @@ export function Participate() {
     amount: '20'
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Envoi des données au webhook
+    try {
+      await fetch('https://conservation-cheryl-maxtrack-6ebca059.koyeb.app/webhook/enrigstrer', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          montant: formData.amount,
+          prenom: formData.firstName,
+          nom: formData.lastName,
+          email: formData.email,
+          prediction: formData.prediction,
+          timestamp: new Date().toISOString(),
+        }),
+      });
+    } catch (error) {
+      console.error('Erreur lors de l\'enregistrement du don:', error);
+      // On continue même en cas d'erreur pour ne pas bloquer l'utilisateur
+    }
 
     // URL de base Donorbox
     const baseUrl = "https://donorbox.org/soutien-a-alex-jordanov-proces";
