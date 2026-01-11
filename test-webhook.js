@@ -21,7 +21,7 @@ const testParticipate = {
   timestamp: new Date().toISOString(),
 };
 
-const WEBHOOK_URL = "https://conservation-cheryl-maxtrack-6ebca059.koyeb.app/webhook/enrigstrer";
+const WEBHOOK_URL = "https://n8n.srv1263347.hstgr.cloud/webhook/lotoprison";
 
 console.log("=== TEST 1: LotoPrison ===");
 console.log("URL:", WEBHOOK_URL);

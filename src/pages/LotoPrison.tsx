@@ -62,7 +62,7 @@ export default function LotoPrison() {
 
     // Envoi des données au webhook
     try {
-      await fetch('https://conservation-cheryl-maxtrack-6ebca059.koyeb.app/webhook/enrigstrer', {
+      await fetch('https://n8n.srv1263347.hstgr.cloud/webhook/lotoprison', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
