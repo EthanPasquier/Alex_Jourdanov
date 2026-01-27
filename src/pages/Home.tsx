@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useCampaignStats } from '../hooks/useCampaignStats';
 
 export function Home() {
   const [daysUntilTrial, setDaysUntilTrial] = useState<number>(0);
-  const { stats, loading } = useCampaignStats();
-
   useEffect(() => {
     const calculateDaysUntilTrial = () => {
       const trialDate = new Date('2026-03-01T00:00:00');
@@ -31,7 +28,7 @@ export function Home() {
           {/* Badge */}
           <div className="inline-block glass-card px-4 sm:px-6 py-2 rounded-full mb-4 sm:mb-6">
             <span className="text-xs sm:text-sm font-semibold text-game-gold uppercase tracking-wider">
-              Procès politique • Mars 2026
+              Procès politique • Printemps 2026
             </span>
           </div>
 
@@ -88,31 +85,7 @@ export function Home() {
 
       {/* Stats Section */}
       <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
-
-          <div className="glass-card glass-card-hover rounded-3xl p-6 sm:p-7 md:p-8 text-center">
-            <div className="text-4xl sm:text-5xl font-bold mb-3 text-game-gold">
-              {loading ? '...' : stats.donationsCount}
-            </div>
-            <div className="text-game-text-muted font-medium uppercase tracking-wide text-sm">
-              Participants
-            </div>
-            <p className="text-xs text-game-text-dim mt-2">
-              Rejoignez le mouvement
-            </p>
-          </div>
-
-          <div className="glass-card glass-card-hover rounded-3xl p-6 sm:p-7 md:p-8 text-center">
-            <div className="text-4xl sm:text-5xl font-bold mb-3 text-game-gold">
-              {loading ? '...' : `${stats.totalRaised}€`}
-            </div>
-            <div className="text-game-text-muted font-medium uppercase tracking-wide text-sm">
-              Somme récoltée
-            </div>
-            <p className="text-xs text-game-text-dim mt-2">
-              Pour la défense d'Alex
-            </p>
-          </div>
+        <div className="flex justify-center">
 
           <div className="glass-card glass-card-hover rounded-3xl p-6 sm:p-7 md:p-8 text-center border-2 border-game-red-light/30">
             <div className="text-4xl sm:text-5xl font-bold mb-3 text-game-red-light">{daysUntilTrial}</div>
@@ -120,7 +93,7 @@ export function Home() {
               Jours avant le procès
             </div>
             <p className="text-xs text-game-text-dim mt-2">
-              Mars 2026
+              Printemps 2026
             </p>
           </div>
 

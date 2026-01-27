@@ -94,7 +94,7 @@ export function HowToPlay() {
         <h2 className="text-2xl font-bold mb-6 text-center text-game-gold">Faites vos jeux. Rien ne va plus.</h2>
         <div className="text-center">
           <p className="text-game-text mb-4">
-            Participez maintenant pour soutenir la défense d'Alex et tenter de remporter le Prix Loto Prison 2025.
+            Participez maintenant pour soutenir la défense d'Alex et tenter de remporter le Prix Loto Prison 2026.
           </p>
           <p className="text-game-text-muted italic">
             Parce que quand la justice devient une loterie, autant jouer pour la bonne cause.
