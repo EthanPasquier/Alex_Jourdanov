@@ -1,23 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 export function Home() {
-  const [daysUntilTrial, setDaysUntilTrial] = useState<number>(0);
-  useEffect(() => {
-    const calculateDaysUntilTrial = () => {
-      const trialDate = new Date('2026-03-01T00:00:00');
-      const today = new Date();
-      const diffTime = trialDate.getTime() - today.getTime();
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-      setDaysUntilTrial(diffDays > 0 ? diffDays : 0);
-    };
-
-    calculateDaysUntilTrial();
-    const interval = setInterval(calculateDaysUntilTrial, 1000 * 60 * 60 * 24);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="glass-gradient-bg min-h-screen">
 
@@ -88,13 +72,9 @@ export function Home() {
         <div className="flex justify-center">
 
           <div className="glass-card glass-card-hover rounded-3xl p-6 sm:p-7 md:p-8 text-center border-2 border-game-red-light/30">
-            <div className="text-4xl sm:text-5xl font-bold mb-3 text-game-red-light">{daysUntilTrial}</div>
-            <div className="text-game-text-muted font-medium uppercase tracking-wide text-sm">
-              Jours avant le procès
+            <div className="text-2xl sm:text-3xl font-bold text-game-red-light">
+              Procès au Printemps 2026
             </div>
-            <p className="text-xs text-game-text-dim mt-2">
-              Printemps 2026
-            </p>
           </div>
 
         </div>

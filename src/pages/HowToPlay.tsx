@@ -35,7 +35,7 @@ export function HowToPlay() {
           <div className="bg-game-bg-light rounded-lg p-6 border border-game-border">
             <h3 className="text-lg font-bold text-game-red-light mb-4">Peines encourues</h3>
             <div className="text-game-text space-y-2">
-              <p className="text-xl font-bold">Jusqu'à <span className="text-game-red-light">7 ans de prison et 100 000 euros d'amende</span> et <span className="text-game-red-light">100 000 € d'amende</span></p>
+              <p className="text-xl font-bold">Jusqu'à <span className="text-game-red-light">7 ans de prison et 100 000 euros d'amende</span></p>
               <p><strong>Circonstances aggravantes :</strong> les sources seraient issues de fonctionnaires soumis au secret</p>
             </div>
           </div>
